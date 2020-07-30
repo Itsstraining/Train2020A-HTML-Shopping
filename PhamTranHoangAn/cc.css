@@ -1,0 +1,44 @@
+
+  
+  body {
+    font-family: "Inter", Arial;
+    background: #eacda3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+  }
+
+  h1{
+      color: black;
+      text-align: center;
+      font-size: 100px;
+     margin-left: 15vw;
+      font-family: 'Mulish', sans-serif;
+      background-color: #FFFFFF;
+      width: 70vw;
+  }
+  #bogio{
+      color: crimson;
+  }
+  button {
+    border: 1px solid #722A1B;
+    padding: 4px 14px;
+    background-color: #fff;
+    color: #722A1B;
+    text-transform: uppercase;
+    margin: 5px 0;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover{
+    background-color: red;
+}  
+
+
+
+/* .khung{
+    background-color: #FFFFFF;
+} */

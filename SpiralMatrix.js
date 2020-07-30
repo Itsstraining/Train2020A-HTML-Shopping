@@ -11,14 +11,14 @@ function createTable(size, defaultValue) {
 }
 
 let vector = {
-  x: 0,
-  y: -1,
+  x: 1,
+  y: 0,
 };
 
 function rotate(vector) {
   let result = {
-    x: -vector.y,
-    y: vector.x,
+    x: vector.y,
+    y: -vector.x,
   };
   return result;
 }
@@ -59,8 +59,8 @@ function spiral(size, vector) {
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
-    x: Math.floor(size / 2) - 1,
-    y: Math.floor(size / 2),
+    x: Math.ceil(size / 2)-1 ,
+    y: Math.ceil(size / 2),
   };
   console.log(current);
   while (checkCollision(current, size)) {
