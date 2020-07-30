@@ -35,21 +35,18 @@ function NTN(day, month, year){
 }
 NTN(5, 2, 2021);*/
 
-let a = [7,1,4,6,3,2];
+let a = [7, 1, 4, 6, 5, 3, 9, 2, 2, 3];
 for (i = 0; i < a.length; i++) {
-    console.log(a[i]);
+  console.log(a[i]);
 }
-console.log('------------');
-for (i = 0; i < a.length; i++) 
-for(j=i;j<a.length;j++)
-{
-    if (a[i] < a[j])
-        console.log(a[i], a[j]);
-}
-console.log('------------');
+console.log("------------");
+for (i = 0; i < a.length; i++)
+  for (j = i; j < a.length; j++) {
+    if (a[i] < a[j]) console.log(a[i], a[j]);
+  }
+console.log("------------");
 for (i = 0; i < a.length; i++) {
-    if (a[i] < a[i + 1]){
-        if(a[i+1] < a[i + 2])
-        console.log(a[i], a[i + 1],a[i+2]);
-    }
+  if (a[i] < a[i + 1]) {
+    if (a[i + 1] < a[i + 2]) console.log(a[i], a[i + 1], a[i + 2]);
+  }
 }
