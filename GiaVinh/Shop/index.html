@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel = "stylesheet" href="./color.css">
+
+</head>
+
+<body>
+    <h1 style="background-color: chartreuse;font-size: 50;">Welcom to my shop</h1>
+
+    <p class="phello">Hello homies </p>
+    <ul>
+        List of weed
+        <ol id="ol-render">
+            <!-- <img src="./imagesshop/tulo-shop.jpg" width="500px" height="500px"> <br> -->
+        </ol>
+        <input id="totalmoney" type="number">
+        <button class="button total" onclick="thanhtoan()">Tong tien</button>
+    </ul>
+
+
+    <script>
+        let database = [
+            {
+                id: "p1",
+                name: "og kush",
+                price: 400000,
+                img: "https://viet.seedbanks.co/wp-content/uploads/2018/10/OG-Kush.png",
+                href: "./ogkusk.html"
+            },
+            {
+                id: "p2",
+                name: "canna cookie",
+                price: 450000,
+                img: "https://www.denverpost.com/wp-content/uploads/2016/05/20130909__20130911_C1_FE11FDWEEDp3.jpg?w=600",
+                href: "./cannacookie.html"
+            },
+            {
+                id: "p3",
+                name: "chocolate cookie",
+                price: 490000,
+                img: "https://i.ytimg.com/vi/jn2ZlwKbZvo/maxresdefault.jpg",
+                href: "./chocolatecookie.html"
+            }
+        ];
+        let total = 0;
+        let cart = [];
+        function thanhtoan() {
+            for (let i = 0; i < cart.length; i++) {
+                total = total + cart[i].price;
+            }
+            let tagtotal = document.getElementById("totalmoney");
+            tagtotal.value = total;
+        }
+        function additemtocart(item) {
+            cart.push(item);
+        }
+        //b1 xd dinh noi can render
+        let theol = document.getElementById("ol-render")
+        for (let item of database) {
+            //b2 khai bao ca the can thiet lap di lap lai
+            let theli = document.createElement("li");
+            let theimg = document.createElement("img");
+
+
+
+
+            //b3 gan gia tri va thuoc tinh can thiet cho cac the
+            theimg.src = item.img;
+            theimg.width = 350;
+            //b4 gan the con vao the cha
+
+
+
+            let thename = document.createElement("p");
+            let theprice = document.createElement("p");
+            let thebutton = document.createElement("button");
+
+            thename.innerText = item.name;
+            theprice.innerText = item.price;
+            thebutton.innerText = "addTocart";
+            thebutton.onclick = function () {
+                additemtocart(item);
+            }
+
+            theli.appendChild(thename);
+            theli.appendChild(theprice);
+            theli.appendChild(thebutton);
+            theli.appendChild(theimg);
+            theol.appendChild(theli);
+        }
+    </script>
+</body>
+
+</html>

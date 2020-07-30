@@ -59,7 +59,7 @@ function spiral(size, vector) {
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
-    x: Math.floor(size / 2) - 1,
+    x: Math.floor(size / 2)-1 ,
     y: Math.floor(size / 2),
   };
   console.log(current);
@@ -70,7 +70,7 @@ function spiral(size, vector) {
     current = move(current, vector);
     if (checkCollision(current, size)) {
       matrix[current.x][current.y] = step;
-      step++;
+      step--;
     }
   }
   return matrix;
