@@ -1,30 +1,146 @@
 <head>
-    <title>SkinGun</title>
-    
+    <title>Skin Dao CSGO Royal</title>
+    <meta charset="utf -8">
+    <link rel="stylesheet" href="./mau.css">
+
 </head>
 
 <body>
-    <span style="color: aqua; background-color: yellow;font-size: 50; ">Skin Dao CSGO</span>
-    
-    <ul>
-        <li>Butterfly Damacus steel <img width="100" src="https://s1.cs.money/mEgZFWd_image.jpg" alt=""> 
-        <a href="./Damacus.html">Information</a>
+
+
+    <div class='container'>
+        <span style="color: white ;font-size: 50; ">Skin Dao CSGO Royal</span> <br>
+
+        <ul id="ul1">
+
+            <!-- <li>Butterfly Damacus steel <img width="100" src="https://s1.cs.money/mEgZFWd_image.jpg" alt="">
+            <a href="./Damacus.html">Information</a>
+            <input type="number" name="" id="inputsoluong">
+            <button name="Nhap Hang" type="text"> Buy </button>
+            <button name="Nhap Hang" type="text"> Them Gio </button>
+        </li> -->
+            <!-- <li>
+            M9 Bayonet Crimson Web <img width="100" src="https://s1.cs.money/sRITW4P_image.jpg" alt="">
+            <a href="./Bayonet.html">Information</a>
+            <input type="number" name="" id="inputsoluong">
+            <button name="Nhap Hang" type="text"> Buy </button>
+            <button name="Nhap Hang" type="text"> Them Gio </button>
         </li>
         <li>
-            M9 Bayonet Crimson Web <img width="100" src="https://s1.cs.money/sRITW4P_image.jpg" alt=""> 
-        <a href="./Bayonet.html">Information</a>
+            Karambit Gamma Droppler <img width="100" src="https://s1.cs.money/zmPWfhh_image.jpg" alt="">
+            <a href="./Karambit.html">Information</a>
+            <input type="number" name="" id="inputsoluong">
+            <button name="Nhap Hang" type="text"> Buy </button>
+            <button name="Nhap Hang" type="text"> Them Gio </button>
+        <li>
+            Talon Sappharine <img width="100" src="https://s1.cs.money/2NwuuVH_image.jpg" alt="">
+            <a href="./Talon.html">Information</a>
+            <input type="number" name="" id="inputsoluong">
+            <button name="Nhap Hang" type="text"> Buy </button>
+            <button name="Nhap Hang" type="text"> Them Gio </button>
         </li>
         <li>
-            Karambit Gamma Droppler <img width="100" src="https://s1.cs.money/zmPWfhh_image.jpg" alt=""> 
-        <a href="./Karambit.html">Information</a>
-        </li>
-        <li>
-            Talon Sappharine <img width="100" src="https://s1.cs.money/2NwuuVH_image.jpg" alt=""> 
-        <a href="./Talon.html">Information</a>
-        </li>
-        <li>
-            Butterfly Ruby <img width="100" src="https://s1.cs.money/xtUHTok_image.jpg" alt=""> 
-        <a href="./Butterfly.html">Information</a>
-        </li>
-    </ul>
+            Butterfly Ruby <img width="100" src="https://s1.cs.money/xtUHTok_image.jpg" alt="">
+            <a href="./Butterfly.html">Information</a>
+            <input type="number" name="" id="inputsoluong">
+            <button name="Nhap Hang" type="text"> Buy </button>
+            <button name="Nhap Hang" type="text"> Them Gio </button>
+        </li> -->
+        </ul>
+
+    </div>
+
+    <script>
+        let inputsoluong = document.getElementById("inputsoluong");
+        let database = [
+            { id: 01, name: "Butterfly Damacus Steel", price: 460, image: "https://s1.cs.money/mEgZFWd_image.jpg", href: "./Damacus.html" },
+            { id: 02, name: "M9 Bayonet Crimson Web", price: 14460, image: "https://s1.cs.money/sRITW4P_image.jpg", href: "./Crimson.html" },
+            { id: 03, name: "Karambit Gamma Droppler", price: 7460, image: "https://s1.cs.money/zmPWfhh_image.jpg", href: "./Karambit.html" },
+            { id: 04, name: "Talon Sappharine", price: 6360, image: "https://s1.cs.money/2NwuuVH_image.jpg", href: "./Talon.html" },
+            { id: 05, name: "Butterfly Ruby", price: 9499, image: "https://s1.cs.money/xtUHTok_image.jpg", href: "./Butterfly.html" },
+
+        ];
+
+        let giohangDatabase = [];
+
+        let ul1 = document.getElementById('ul1');
+
+        // function checkId(giohang,id){
+        //     for(let giohang = 0; giohang < giohangDatabase; giohang++){
+        //         if (id == id){
+        //             return prod.id;
+        //         }
+        //     }
+        // }
+
+        for (let prod of database) {
+
+
+            //     <li>
+            //     Butterfly Ruby
+            // <img width="100" src="https://s1.cs.money/xtUHTok_image.jpg" alt="">
+            //     <a href="./Butterfly.html">Information</a>
+            //     <input type="number" name="" id="inputsoluong">
+            //     <button name="Nhap Hang" type="text"> Buy </button>
+            //     <button name="Nhap Hang" type="text"> Them Gio </button>
+            // </li> -->
+
+            let li1 = document.createElement("li"); //<li></li>
+
+            let image1 = document.createElement("img"); // <img>
+            image1.style.width = "200px";
+            image1.style.height = "200px"; // <img width:"200" height:"200">
+            image1.src = prod.image;
+
+            let newLiName = document.createTextNode(prod.name);
+            li1.appendChild(newLiName); // <li> prod.name </li>
+
+            let a1 = document.createElement("a");
+            let newAName = document.createTextNode("Information");
+            a1.appendChild(newAName); // <a> Information </a> 
+
+            let input1 = document.createElement("input");
+            input1.name = "Nhap hang";
+            input1.type = "number"; // <input type="number" name=" " >
+
+            let button1 = document.createElement("button");
+            button1.style.background = "pink";
+            let buttonName = document.createTextNode("Thêm giỏ hàng");
+            button1.appendChild(buttonName);
+            button1.onclick = function themgiohang() {
+                alert('Đã thêm vào giỏ hàng');
+
+                giohangDatabase.push({
+                    id: prod.id,
+                    name: prod.name,
+                    price: prod.price,
+                    soluong: input1.value,
+                    thanhtien: prod.price * input1.value,
+                });
+            }
+
+            a1.href = prod.href;
+
+            li1.appendChild(a1);
+            li1.appendChild(image1);
+            li1.appendChild(input1);
+            li1.appendChild(button1);           // <li>
+            // <a></a>
+            // <img>
+            // <input>
+            // <button></button>
+            // </li>
+
+
+            ul1.appendChild(li1);   // <ul>
+            // <li>
+            // <a></a>
+            // <img> 
+            // <input>
+            // <button></button>
+            // </li>
+            // </ul>
+
+        }
+    </script>
 </body>
