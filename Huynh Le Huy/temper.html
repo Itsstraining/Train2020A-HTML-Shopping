@@ -13,8 +13,8 @@
 
 
     <div class="row">
-        <div class="col s12 m7" id="listview">
-            <!-- <div class="card">
+        <div class="col s12 m7">
+            <div class="card">
                 <div class="card-image">
                     <img src="AssassinCreed/pic1.jpg">
                     <span class="card-title">Assassin's Creed Unity</span>
@@ -27,9 +27,9 @@
                 <div class="card-action">
                     <a onclick="tinhtien()" class='btn cta'>Tinh tien</a>
                 </div>
-
-            </div> -->
-
+                
+            </div>
+            
         </div>
     </div>
 
@@ -40,7 +40,7 @@
     <a onclick="tinhtien()" class='btn cta'>Tinh tien</a>
     <h1 id="tongtien" style="color: darkred; border-style: dotted; border-color: darkred;"></h1>
 
-
+    
     <script>
         let database = [
             { id: "01", name: "Assassin's Creed Unity", price: 500000, img: "AssassinCreed/pic1.jpg" },
@@ -54,41 +54,25 @@
 
 
         let cart = [];
-        let ol = document.getElementById("listview");
+        let ol = document.getElementById("ol1");
 
         for (let i = 0; i < database.length; i++) {
             let li = document.createElement("div");
-            let name = document.createElement("span");
+            let name = document.createElement("p");
             let id = document.createElement("p");
             let img = document.createElement("img");
             let price = document.createElement("p");
             let button = document.createElement("a");
 
-
-
-            let divImageTitle = document.createElement("span");
-            divImageTitle.className = "card-title";
-
-            // Make container
-
-            // IMG
-
-            let divImageContainer = document.createElement("div");
-            divImageContainer.className = "card-image";
-
-
-
-            let divButtonContainer = document.createElement("div");
-            divButtonContainer.className = "card-action";
-
-
+            
+            
 
             li.className = "card";
 
-            name.className = "card-title";
+            name.className = "name";
 
-            // id.className = ""
-
+            id.className = ""
+            
 
 
 
@@ -100,14 +84,11 @@
             name.innerText = database[i].name;
             img.src = database[i].img;
             img.width = 500;
-            img.length = 200;
+            img.length =200;
             price.innerText = database[i].price;
-            price.className ="priceTag"
             button.innerText = "ấn mua";
             button.classList.add('btn');
             button.classList.add('cta');
-
-
             button.onclick = function themGioHang() {
                 cart.push({
                     id: database[i].id,
@@ -117,24 +98,13 @@
                 console.log(cart);
             }
 
-            // BUTTON
-            divButtonContainer.appendChild(button) 
-            divImageContainer.appendChild(img)
-            divImageContainer.appendChild(name)
 
-
-            li.appendChild(divImageContainer);
-            li.appendChild(divButtonContainer);
+            li.appendChild(id)
+            li.appendChild(document.createElement('br'));
+            li.appendChild(name);
+            li.appendChild(img);
             li.appendChild(price);
-
-
-
-            // li.appendChild(id)
-            // // li.appendChild(document.createElement('br'));
-            // li.appendChild(name);
-            // li.appendChild(img);
-            // li.appendChild(price);
-            // li.appendChild(button);
+            li.appendChild(button);
 
             ol.appendChild(li);
         }
@@ -149,8 +119,8 @@
         }
 
 
-        for (let i = 0; i < database.length; i++) {
-
+        for (let i = 0; i < database.length; i++){
+            
         }
 
 
