@@ -1,32 +1,46 @@
 <head>
     <title>LineFriends</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
-    <h1 style="text-align: center;">LINE FRIENDS</h1>
+    <h1 id="title" style="text-align: center;">LINE FRIENDS</h1>
     <hr>
-    <div>
-        <ul>
-            <li style="outline: none;">
-                <img src="./image/cushion.jpg" width="200px" height="200px"> <br>
-                <a style="color:#333"; href="./details/cushion.html">Cushion</a>
-            </li>
-            <li>
-                <img src="./image/calculator.jpg" width="200px" height="200px"> <br>
-                <a style="color:#333"; href="./details/calculator.html">Calculator</a>
-            </li>
-            <li>
-                <img src="./image/case.jpg" width="200px" height="200px"> <br>
-                <a style="color:#333"; href="./details/case.html">Case</a>
-            </li>
-            <li>
-                <img src="./image/CoinBank.jpg" width="200px" height="200px"> <br>
-                <a style="color:#333"; href="./details/bankcoin.html">Coin Bank</a>
-            </li>
-            <li>
-                <img src="./image/pencilcase.jpg" width="200px" height="200px"> <br>
-                <a style="color:#333"; href="./details/pencilcase.html">Pencil Case</a>
-            </li>
-        </ul>
+    <i class='fas fa-shopping-basket'  href="/cart.html"></i>
+
+    <!--<a id="cart" href="/cart.html">Cart</a>-->
+    
+    <div class="row">
+            <ul id="item">
+                <!-- <li style="outline: none;">
+                    <img src="./image/cushion.jpg" width="200px" height="200px"> <br>
+                    <a style="color:#333"; href="./details/cushion.html">Cushion</a>
+                </li>
+                <li>
+                    <img src="./image/calculator.jpg" width="200px" height="200px"> <br>
+                    <a style="color:#333"; href="./details/calculator.html">Calculator</a>
+                </li>
+                <li>
+                    <img src="./image/case.jpg" width="200px" height="200px"> <br>
+                    <a style="color:#333"; href="./details/case.html">Case</a>
+                </li>
+                <li>
+                    <img src="./image/CoinBank.jpg" width="200px" height="200px"> <br>
+                    <a style="color:#333"; href="./details/bankcoin.html">Coin Bank</a>
+                </li>
+                <li>
+                    <img src="./image/pencilcase.jpg" width="200px" height="200px"> <br>
+                    <a style="color:#333"; href="./details/pencilcase.html">Pencil Case</a>
+                </li> -->
+            </ul>
+        
     </div>
+    <hr>
+        <button id="Bill" onclick = "tinhtien()">Bill</button>
+        <h2 id="tongBill" >Bill</h2>
+    <script src="./main.js"></script>
+
 </body>
