@@ -1,19 +1,25 @@
 <head>
     <title>Cua hang tap hoa cua Thanh Kiet</title>
+    <link href="./design.css" rel="stylesheet">
 </head>
 
 <body>
 
     <img width="1000" src="./imagine/kinh-nghiem-kinh-doanh-tap-hoa.jpg">
     <div style="font-size: 30;color: navy;background-color: orange">
-        <p><b>An toan</b> va <b>Uy tin</b></p>
+
+        <p style="text-align: center"><b>An toan</b> va <b>Uy tin</b></p>
     </div>
+
     <ol id="listofproduct">
 
     </ol>
     <!-- <input id="inputNumber" type="number"> -->
-    <button onClick="TinhTien()">Tong Tien</button>
-    <h1 id="TongTien"></h1>
+    <div>
+        <button onClick="TinhTien()">Tong Tien</button>
+        <h2 id="TongTien"></h2>
+    </div>
+
     <script>
         let database = [{
             id: "P01",
@@ -49,6 +55,8 @@
             let m = document.createElement("p");
             let img = document.createElement("img");
             let button = document.createElement("button");
+            button.classList.add("btn-hover");
+            button.classList.add("color-6");
 
 
             id.innerText = database[i].id
@@ -81,10 +89,8 @@
                     TongTien = TongTien + cart[i].price;
                 }
                 let Thetongtien = document.getElementById("TongTien");
-                Thetongtien.innerText = TongTien;
+                Thetongtien.innerText = `${TongTien}`;
             }
         }
     </script>
-
-
 </body>
