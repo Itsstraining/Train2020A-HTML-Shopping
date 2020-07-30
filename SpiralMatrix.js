@@ -11,17 +11,11 @@ function createTable(size, defaultValue) {
 }
 
 let vector = {
-  x: 0,
-  y: -1,
+  x: 1,
+  y: 0,
 };
 
-function rotate(vector) {
-  let result = {
-    x: -vector.y,
-    y: vector.x,
-  };
-  return result;
-}
+
 
 function checkCollision(current, size) {
   if (
@@ -54,13 +48,19 @@ function move(current, vector) {
   };
   return rPos;
 }
-
+function rotate(vector) {
+  let result = {
+    x: vector.y,
+    y: -vector.x,
+  };
+  return result;
+}
 function spiral(size, vector) {
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
-    x: Math.floor(size / 2) - 1,
-    y: Math.floor(size / 2),
+    x: Math.floor(size / 2),
+    y: Math.floor(size / 2)+1,
   };
   console.log(current);
   while (checkCollision(current, size)) {
@@ -77,5 +77,25 @@ function spiral(size, vector) {
 }
 
 let matrix = spiral(5, vector);
-
 console.log(matrix);
+
+function print(matrix){
+  let str= '';
+  for(let i=0;i<matrix.length;i++){
+
+  
+    for(let j=0;j<matrix.length;j++)
+    {
+      str += matrix[i][j] + '\t' ;
+      
+      
+    }
+    console.log(str);
+ }
+ 
+
+
+    
+  return str;
+}
+print(matrix);
