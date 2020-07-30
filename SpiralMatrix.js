@@ -23,6 +23,14 @@ function rotate(vector) {
   return result;
 }
 
+function rotatetion(vector) {
+  let result = {
+    x: vector.y,
+    y: -vector.x,
+  };
+  return result;
+}
+
 function checkCollision(current, size) {
   if (
     current.x < 0 ||
@@ -77,5 +85,7 @@ function spiral(size, vector) {
 }
 
 let matrix = spiral(5, vector);
+
+
 
 console.log(matrix);
