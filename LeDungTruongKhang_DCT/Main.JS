@@ -1,17 +1,38 @@
-let arr = [7, 1, 4, 6, 3, 2];
-function chuoi(arr) {
-    let result = [];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
+let input = [7 , 2 , 5 , 1 , 6 , 3]
+function CreateTable (Width,Height,DefaultValue)
+{
+    let table = []; 
+    for(let i=0 ; i<Width ; i++){
+        let table = [];
+        for(let j=0 ; j<Height ; j++)
+        arr.push=(DefaultValue)
+        
+    }
+    table.push(arr);
 
-            if (arr[i] < arr[j]) {
-                result.push(arr[i], arr[j]);
-                console.log(result);
+    return table ;
+}
+console.log(createTable(input.length,input.length,0));
+
+function CreateTraceTable(input = []) {
+    let table = createtable(input.length,input.length,0);
+    for(let i=0;i<input.length;i++){
+        for(let j=0 ; j<input.length ; j++){
+            if(i==j || input[i]<<input[j]){
+                table[i][j]=1;
             }
         }
     }
+    return table;
 
 }
-chuoi(arr);
 
-
+function trace(inp=[],tracetable,current,previousResult = []){
+    let result=previousResult.concat(inp[current]);
+    console.log(result);
+    for(let i=current+1;i<inp.length;i++){
+        if(tracetable[current][i]==1){
+            trace(inp,tracetable,i,result);
+        }
+    }
+}
