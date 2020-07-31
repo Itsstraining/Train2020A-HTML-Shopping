@@ -59,7 +59,7 @@
                     <th><input class="button" type="button" name="zero" value="0" onclick="display.value += 0 "></th>
                     <th><input class="button" type="button" name="dot" value="." onclick="display.value +='.'"></th>
                     <th><input class="button" type="button" name="operator" value="="
-                            onclick="display.value=eval(display.value)">
+                            onclick="saveans()">
                     </th>
                 </tr>
                 <tr>
@@ -71,15 +71,21 @@
     </form>
     <script>
         let ans = 0;
-        function previousans() {
+        function saveans(){
             let input = document.getElementById('input')
-            input.value = ans;
+            let value = input.value
+            let result = eval(value)
+            input.value=result
+            ans = result
         }
 
-        function saveeval(){
+        function previousans() {
             let input = document.getElementById('input')
-            
+            let value = input.value
+            input.value += ans
         }
+
+        
 
         function tinhsin() {
             let input = document.getElementById('input');
