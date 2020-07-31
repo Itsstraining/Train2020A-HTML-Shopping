@@ -76,6 +76,6 @@ function spiral(size, vector) {
   return matrix;
 }
 
-let matrix = spiral(5, vector);
+let matrix = spiral(8, vector);
 
 console.log(matrix);
