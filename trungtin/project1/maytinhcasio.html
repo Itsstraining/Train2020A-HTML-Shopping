@@ -1,0 +1,66 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="./class.css"  >
+</head>
+<body>
+    <div class="Calculator">
+        <h1>Calculator</h1>
+
+        <div class="screen">
+            <input type="text" id="inputvalue" class="box-calculator">
+        </div >
+
+            <table>
+            <tr>
+            <td colspan="4">
+                </td>
+            
+                    <button onclick="button" class="btn btn-primary">Tan</button>
+                    <button onclick="button" class="btn btn-primary">Cos</button>
+                    <button onclick="button" class="btn btn-primary">Sin</button>
+                    <button  class="btn btn-primary">/</button>
+                </tr>
+                
+                <tr>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">7</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">8</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">9</button>
+                    <button  class="btn btn-primary">*</button>
+                </tr
+                
+                <tr>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">4</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">5</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">6</button>
+                    <button  class="btn btn-primary">-</button>
+                </tr>
+                
+
+                <tr>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">1</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">2</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">3</button>
+                    <button class="btn btn-primary">+</button>
+                </tr>
+                
+
+                <tr>
+                    <button onclick="dot" class="btn btn-primary">.</button>
+                    <button onclick="getnumber(this.innerText)" class="btn btn-primary">0</button>
+                    <button class="btn btn-primary">del</button>
+                    <button class="btn btn-primar">=</button>
+                </tr>
+                
+
+            </td>
+        </table>
+
+
+</body>
+<script>
+    function getnumber(a){
+        console.log(a);    
+        let the = document.getElementById("inputvalue");
+        the.value += a ;
+        
+    };
+</script>

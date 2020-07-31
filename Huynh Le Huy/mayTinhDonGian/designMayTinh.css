@@ -1,0 +1,152 @@
+form {
+    background: #ccc;
+    margin: 0 auto;
+    width: 600px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  form * {
+    box-sizing: border-box;
+  }
+  
+  form table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  form table tr, form table td {
+    border: 1px solid #eee;
+  }
+  
+  form table tr:first-child input {
+    height: 50px;
+    padding: 0 10px;
+    font-weight: 700;
+  }
+  
+  form table tr:not(:first-child) td {
+    height: 70px;
+  }
+  
+  form table tr:not(:first-child) td input {
+    height: 100%;
+  }
+  
+  form table input {
+    width: 100%;
+    display: block;
+    border: 0;
+    font-size: 16px;
+  }
+  
+  form table input:focus {
+    outline: none;
+  }
+  
+  form table input:hover {
+    background: #eee;
+    transition: all .2s ease-in-out;
+  }
+  
+  form table input.operator {
+    width: 100%;
+    font-weight: 700;
+    color: #fff;
+    background: #ffcc00;
+  }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Rose', cursive;
+    background-color:#efefef;
+}
+
+#navbar {
+    width: 100%;
+    background-color:white ;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.9)
+}
+
+
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    
+    
+}
+
+ul li {
+    
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+    transition: .5s;
+    background-color: white;
+    
+   
+}
+
+ul li:hover {
+    background-color: turquoise;
+    color: black;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    
+}
+
+span {
+    color: turquoise;
+    
+}
+
+span:hover {
+    color: black;
+}
+
+.toggle {
+    
+    background-color: white;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: black;
+    font-size: 30px;
+    display: none;
+}
+
+@media (max-width:768px) {
+
+    .toggle {
+        display: block;
+    }
+
+    ul {
+        width: 100%;
+        display: none;
+        height: 50px;
+       
+        
+    }
+     ul li {
+         display: block;
+         text-align: center;
+     }
+.active {
+    display: block;
+}
+
+
+}
