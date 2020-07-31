@@ -1,0 +1,61 @@
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./operator.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Simple Calculator</h1><hr>
+        </div>
+            <div class="cal-contain">
+                <form name="Calculator">
+                    <table>
+                        <td colspan="5">
+                            <input id="answerValue" type="text" name="answer" disabled>
+                        </td>
+                        <tr>
+                            <td><input type="button" value="AC" onclick="Calculator.answer.value = ``"></td>
+                            <td><input class="operator" type="button" value="sin" onclick= "tinhsin()"></td>
+                            <td><input class="operator" type="button" value="cos" onclick="tinhcos()"></td>
+                            <td><input type="button" value="+" onclick="Calculator.answer.value += `+`"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="7" onclick="Calculator.answer.value += 7"></td>
+                            <td><input type="button" value="8" onclick="Calculator.answer.value += 8"></td>
+                            <td><input type="button" value="9" onclick="Calculator.answer.value += 9"></td>
+                            <td><input type="button" value="-" onclick="Calculator.answer.value += `-`"></td>
+                        </tr>
+                        <tr></tr>
+                            <td><input type="button" value="4" onclick="Calculator.answer.value += 4"></td>
+                            <td><input type="button" value="5" onclick="Calculator.answer.value += 5"></td>
+                            <td><input type="button" value="6" onclick="Calculator.answer.value += 6"></td>
+                            <td><input type="button" value="*" onclick="Calculator.answer.value += `*`"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="1" onclick="Calculator.answer.value += 1"></td>
+                            <td><input type="button" value="2" onclick="Calculator.answer.value += 2"></td>
+                            <td><input type="button" value="3" onclick="Calculator.answer.value += 3"></td>
+                            <td><input type="button" value="/" onclick="Calculator.answer.value += `/`"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="." onclick="Calculator.answer.value += `.`"></td>
+                            <td><input type="button" value="0" onclick="Calculator.answer.value += 0"></td>
+                            <td><input type="button" value="=" onclick="Calculator.answer.value = eval(Calculator.answer.value)"></td>
+                            <td><input type="button" value="ANS" onclick=""></td>
+                        </tr>
+                    </table>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
