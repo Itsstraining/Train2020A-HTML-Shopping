@@ -1,19 +1,47 @@
 <head>
-    <title>Cửa hàng vũ khí</title>
+    <title>Weapons Shop</title>
+    <link href="./main.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <!-- add icon link -->
+    <link rel="icon" href="https://i.ytimg.com/vi/LalFDdgXKO8/maxresdefault.jpg" type="image/x-icon">
+
+
+
 </head>
+
 <body>
-    <h1 style="background-color: aquamarine;">Giới thiệu</h1>
-    <P style="background-color: chartreuse;">Những món vũ khí khuyên dùng</P>
-    <ul>
-        <li><img width="200" src="./1200px-DesertEagle_50AE.jpg" alt="Desert Eagle"></li>
-        <h1 style="font-size: medium;"> <a href="https://en.wikipedia.org/wiki/Desert_Eagle" target="_blank">Súng lục Desert Eagle</a> </h1>
-        <li><img width="200" src="./1200px-Heckler_&_Koch_MP5-1.jpg" alt="MP5"></li>
-        <h1 style="font-size: medium; "> Súng MP5</h1>
-        <li><img width="200" src="./ak47large.jpg" alt="AK47"></li>
-        <h1 style="font-size: medium; "> <a href="http://the1stworld.blogspot.com/2012/07/ak47-piece-of-history.html" target="_blank"> Súng AK47</a></h1>
-        <li><img width="200" src="./FN_M4A1_Rotators_1-1800x750.jpg" alt=""></li>
-        <h1 style="font-size: medium; "> Súng M4A1</h1>
-        <li><img width="200" src="./UC3113.jpg" alt="Karambit"></li>
-        <h1 style="font-size: medium; "> Dao Karambit</h1>
-  </ul>
+    <div class="container demo">
+        <div class="content">
+            <div id="large-header" class="large-header">
+                <canvas id="demo-canvas"></canvas>
+                <h1 style="font-style: oblique;font-stretch: narrower;color: aquamarine; text-align: center;font:bolder;font: 900;">Author RyuuNguyen</h1>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <button style="border-right: lightskyblue;" onclick=""> cart </button> -->
+    <section>
+        <!--for demo wrap-->
+        <h1 style="color:black;">Recommended Items</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+
+                <ol id="items">
+
+
+                </ol>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <button onclick="count()" style="width: 100px;height: 50;text-align: center;">Count</button>
+    <h1 id="Total"></h1>
+    <script src="./shop.js"></script>
+
+
+
+
+
+
 </body>
