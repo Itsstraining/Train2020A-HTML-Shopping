@@ -1,0 +1,86 @@
+/*#result{
+
+}
+.screen{
+    margin: ;
+}
+.btn btn-primary
+{
+
+}*/
+body{
+   background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
+h1{
+    text-align:center;
+    margin-top: 5vh;
+    font-size: 25px;
+    color:#D79C7B;
+
+}
+
+form {
+    margin: 0 auto;
+    width: 50vw;
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 10vh;
+  }
+  
+  form * {
+    box-sizing: border-box;
+  }
+  
+  form table {
+    width: 45vw;
+    border-collapse: collapse;
+    margin-left:1vw;
+   
+  }
+  
+  form table tr, form table td {
+    padding:5px;
+  }
+  
+  form table tr:first-child input {
+    height: 40px;
+    padding: 0 10px;
+    font-weight: 700;
+  }
+  
+  form table tr:not(:first-child) td {
+    height: 70px;
+  }
+  
+  form table tr:not(:first-child) td input {
+    height: 100%;
+  }
+  
+  form table input {
+    width: 100%;
+    display: block;
+    border: 0;
+    font-size: 16px;
+    background:#D7D6F2;
+    opacity: 0.9;
+  }
+  
+  form table input:focus {
+    outline: none;
+  }
+  
+  form table input:hover {
+    background:#A7F6F8;
+    transition: all .2s ease-in-out;
+  }
+  
+  form table input.operator {
+    font-weight: 700;
+    color: #fff;
+    background: #7DC47D;
+  }
+
+form table input.operator:hover {
+    background: #A1AFA0;
+  }

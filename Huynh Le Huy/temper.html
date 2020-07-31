@@ -1,0 +1,129 @@
+<head>
+    <p style="text-align: center;">Gaming Shop</p>
+    <link href="./design.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img src="AssassinCreed/pic1.jpg">
+                    <span class="card-title">Assassin's Creed Unity</span>
+                </div>
+                <div class="card-content">
+                    <p>Giờ đây không cần tới Paris hay tham gia vào game Assassin's Creed Unity, các bạn vẫn có thể tham
+                        quan và trải nghiệm không khí của một nhà thờ mang phong cách Gothic cổ điển ngay tại Việt Nam.
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a onclick="tinhtien()" class='btn cta'>Tinh tien</a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+    <ol id="ol1">
+
+    </ol>
+    <a onclick="tinhtien()" class='btn cta'>Tinh tien</a>
+    <h1 id="tongtien" style="color: darkred; border-style: dotted; border-color: darkred;"></h1>
+
+    
+    <script>
+        let database = [
+            { id: "01", name: "Assassin's Creed Unity", price: 500000, img: "AssassinCreed/pic1.jpg" },
+            { id: "02", name: "WW2", price: 500000, img: "WWZ/pic2.jpg" },
+            { id: "03", name: "Farcry3", price: 500000, img: "Farcry3/pic3.jpg" },
+            { id: "04", name: "BatMan", price: 500000, img: "BatMan/pic4.jpg" },
+            { id: "05", name: "Gta V", price: 500000, img: "GTAV/pic5.jpg" },
+
+        ];
+
+
+
+        let cart = [];
+        let ol = document.getElementById("ol1");
+
+        for (let i = 0; i < database.length; i++) {
+            let li = document.createElement("div");
+            let name = document.createElement("p");
+            let id = document.createElement("p");
+            let img = document.createElement("img");
+            let price = document.createElement("p");
+            let button = document.createElement("a");
+
+            
+            
+
+            li.className = "card";
+
+            name.className = "name";
+
+            id.className = ""
+            
+
+
+
+
+
+
+
+            id.innerText = database[i].id;
+            name.innerText = database[i].name;
+            img.src = database[i].img;
+            img.width = 500;
+            img.length =200;
+            price.innerText = database[i].price;
+            button.innerText = "ấn mua";
+            button.classList.add('btn');
+            button.classList.add('cta');
+            button.onclick = function themGioHang() {
+                cart.push({
+                    id: database[i].id,
+                    name: database[i].name,
+                    price: database[i].price
+                });
+                console.log(cart);
+            }
+
+
+            li.appendChild(id)
+            li.appendChild(document.createElement('br'));
+            li.appendChild(name);
+            li.appendChild(img);
+            li.appendChild(price);
+            li.appendChild(button);
+
+            ol.appendChild(li);
+        }
+
+        function tinhtien() {
+            let tongTien = 0;
+            for (i = 0; i < cart.length; i++) {
+                tongTien += cart[i].price;
+            }
+            let thetongtien = document.getElementById("tongtien");
+            thetongtien.innerText = tongTien;
+        }
+
+
+        for (let i = 0; i < database.length; i++){
+            
+        }
+
+
+    </script>
+
+</body>

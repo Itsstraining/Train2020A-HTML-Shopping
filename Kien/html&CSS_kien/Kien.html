@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <link href="./main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <h1 style="color: lemonchiffon;"> <B>CHÀO MỪNG ĐẾN VỚI SỚM CẦU LÔNG GK</B></h1>
+    <h1 id="header2"><b>DANH SÁCH CÁC SẢN PHẨM CẦU LÔNG</b></h1>
+    <ol id="ol1">
+    </ol>
+    <button onclick="tongTien()"><u><b>Tổng tiền</b></u></button>
+    <p id="tongtien" style="color: lightcyan;"></p>
+
+    <script>
+        let inputNumber = document.getElementById("inpuNumber");
+        let database = [
+            { id: "a00", name: "Vợt Astrox 100", price: 3000000, img: "./image/5.jpg" },
+            { id: "a01", name: "Vợt Astrox 99", price: 3000000, img: "./image/4.jpg" },
+            { id: "a02", name: "Vợt Astrox 88s", price: 2600000, img: "./image/2.jpg" },
+            { id: "a03", name: "Vợt Astrox 88d", price: 2500000, img: "./image/3.jpg" },
+            { id: "a04", name: "Vợt Astrox 77", price: 2000000, img: "./image/0.jpg" },
+            { id: "a05", name: "Vợt Astrox 7", price: 700000, img: "./image/1.jpg" }
+        ];
+        let arr = [];
+        let ol = document.getElementById("ol1");
+        function addToCard(prod) {
+            arr.push(prod);
+            console.log(arr);
+        }
+
+        for (let prod of database) {
+            let li = document.createElement("li");
+            let p = document.createElement("p");
+            let img = document.createElement("img");
+            let price = document.createElement("p");
+            let count = document.createElement("p");
+            let buttonAdd = document.createElement("button");
+
+
+            buttonAdd.innerHTML = 'Mua Thêm';
+            img.src = prod.img;
+            img.width = 250;
+            price.innerText = prod.price + 'VNĐ';
+
+            let counted = 0;
+
+            li.appendChild(p.appendChild(document.createTextNode(prod.name)));
+            li.appendChild(img);
+            li.appendChild(price);
+            li.appendChild(buttonAdd);
+            li.appendChild(count.appendChild(document.createTextNode(counted)));
+            // li.classList.add("card","card-5");
+            buttonAdd.onclick = () => {
+                counted++;
+                li.replaceChild(count.appendChild(document.createTextNode(counted)), li.childNodes[4])
+                addToCard(prod);
+
+            }
+
+            ol.appendChild(li);
+            // buttonAdd.onclick= function themgio(){
+            //     arr.push({id:"database[i].id", name:"database[i].name", img:"database[i].img"});
+            //  }
+
+        }
+
+        function tongTien() {
+            let tongtien = 0
+            for (let i = 0; i < arr.length; i++) {
+                tongtien += arr[i].price;
+            }
+            console.log(tongtien);
+            let thethanhtien = document.getElementById("tongtien");
+            thethanhtien.innerText = tongtien + 'VNĐ';
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
