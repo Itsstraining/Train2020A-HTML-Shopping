@@ -29,6 +29,7 @@ for(let pro of database) {
     let img = document.createElement("img");
     let id = document.createElement("id");
     let a = document.createElement("a");
+    let input = document.createElement("input");
     let button = document.createElement("button");
 
     //let button2 = document.createElement("button");
@@ -36,12 +37,18 @@ for(let pro of database) {
     img.src = pro.url;
     a.setAttribute("id", "proName");
     a.innerText = pro.name;
+    input.type = "number";
+
+    // a2.setAttribute("id", "Info");
+    // a2.innerText = "More Info";
+    // a2.href = pro.href; 
 
     
     
     li.appendChild(img);
     li.appendChild(a);
     li.appendChild(button);
+    li.appendChild(input);
     ul.appendChild(li);
 
     //button2.setAttribute("id", "Info");

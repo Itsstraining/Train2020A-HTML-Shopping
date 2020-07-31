@@ -66,6 +66,7 @@ img{
 
 img:hover{
     opacity: 0.3;
+
 }
 
 #proName{
@@ -77,12 +78,11 @@ img:hover{
     -ms-transform: translate(-150%, -100%)!important;
 }
 
-
-/* #Info{
-    width: 150px ;
+/* 
+#Info{
     position: absolute; 
-    transform: translate(-190%, 700%)!important;
-    -ms-transform: translate(-150%, -100%)!important;
+    transform: translate(-250%, 900%)!important;
+    -ms-transform: translate(-150%, -200%)!important;
     margin: 1%;
     text-align: center;
 } */
