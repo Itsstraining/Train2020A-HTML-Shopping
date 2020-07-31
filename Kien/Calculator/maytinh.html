@@ -1,0 +1,93 @@
+<head>
+
+</head>
+<link href="./maytinh.css" rel="stylesheet" />
+
+<body>
+
+    
+
+    <form name="calculator">
+        <table>
+            <tr>
+                <td colspan="6">
+                    <input id="inputV" type="text" name="display" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" name="seven" value="7" onclick="calculator.display.value += 7"></td>
+                <td><input type="button" name="eight" value="8" onclick="calculator.display.value += 8"></td>
+                <td><input type="button" name="nine" value="9" onclick="calculator.display.value += 9"></td>
+                <td><input type="button" class="operator" name="plus" value="+"
+                        onclick="calculator.display.value += '+'"></td>
+                <td><input type="button" class="operator" name="cos" onclick="TinhSin()" value="Sin()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="four" value="4" onclick="calculator.display.value += 4"></td>
+                <td><input type="button" name="five" value="5" onclick="calculator.display.value += 5"></td>
+                <td><input type="button" name="six" value="6" onclick="calculator.display.value += 6"></td>
+                <td><input type="button" class="operator" name="minus" value="-"
+                        onclick="calculator.display.value += '-'"></td>
+                <td><input type="button" class="operator" name="cos" onclick="TinhCos()" value="Cos()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="one" value="1" onclick="calculator.display.value += 1"></td>
+                <td><input type="button" name="two" value="2" onclick="calculator.display.value += 2"></td>
+                <td><input type="button" name="three" value="3" onclick="calculator.display.value += 3"></td>
+                <td><input type="button" class="operator" name="times" value="x"
+                        onclick="calculator.display.value += '*'"></td>
+                <td><input type="button" class="operator" name="tan" onclick="TinhTan()" value="Tan()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" class="operator" id="clear" name="clear" value="C"
+                        onclick="calculator.display.value = ''"></td>
+                <td><input type="button" class="operator" name="zero" value="0"
+                        onclick="calculator.display.value += '0'"></td>
+                <td><input type="button" class="operator" name="doit" value="="
+                        onclick="clickequal()"></td>
+                <td><input type="button" class="operator" name="div" value="/"
+                        onclick="calculator.display.value += '/'"></td>
+                <td><input type="button" class="operator" name="ans" onclick="showAns()" value="ans"></td>
+
+            </tr>
+
+        </table>
+        <script>
+            //khai bao bien tong cho ans
+            let ans = 0;
+            function showAns() {
+                let input = document.getElementById("inputV");
+                input.value += ans;
+            
+            }
+
+            function clickequal(){
+                let input = document.getElementById("inputV");
+                let rs = eval(input.value);
+                input.value = rs;
+                ans = rs;
+            }
+            function TinhSin() {
+                let input = document.getElementById("inputV");
+                let value = input.value;
+                let result = Math.sin(value);
+                input.value = result;
+            }
+            function TinhCos() {
+                let input = document.getElementById("inputV");
+                let value = input.value;
+                let result = Math.cos(value);
+                input.value = result;
+            }
+            function TinhTan() {
+                let input = document.getElementById("inputV");
+                let value = input.value;
+                let result = Math.tan(value);
+                input.value = result;
+            }
+
+
+
+        </script>
+</body>
