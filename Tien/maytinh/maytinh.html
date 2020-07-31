@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="./style.css">
+
+<body>
+    <div>
+        <img src="https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.15752-9/116590465_291197485649783_5076397705224592634_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=Z7XCaBCeyEYAX-XYif1&_nc_ht=scontent.fsgn5-4.fna&oh=0469bf13ab83feed6f49801099dadf00&oe=5F4B31D7"
+            alt="">
+    </div>
+
+    <div>
+        <form name="calculator">
+            <table>
+                <tr>
+                    <td colspan="4">
+                        <input type="text" name="display" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="bảy" value="7" onclick="calculator.display.value += 7"></td>
+                    <td><input type="button" name="tám" value="8" onclick="calculator.display.value += 8"></td>
+                    <td><input type="button" name="chín" value="9" onclick="calculator.display.value += 9"></td>
+                    <td><input type="button" class="operator" name="cộng" value="+"
+                            onclick="calculator.display.value += '+'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="bốn" value="4" onclick="calculator.display.value += 4"></td>
+                    <td><input type="button" name="năm" value="5" onclick="calculator.display.value += 5"></td>
+                    <td><input type="button" name="sáu" value="6" onclick="calculator.display.value += 6"></td>
+                    <td><input type="button" class="operator" name="trừ" value="-"
+                            onclick="calculator.display.value += '-'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" name="một" value="1" onclick="calculator.display.value += 1"></td>
+                    <td><input type="button" name="hai" value="2" onclick="calculator.display.value += 2"></td>
+                    <td><input type="button" name="ba" value="3" onclick="calculator.display.value += 3"></td>
+                    <td><input type="button" class="operator" name="nhân" value="x"
+                            onclick="calculator.display.value += '*'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="operator" id="clear" name="xóa" value="C"
+                            onclick="calculator.display.value = ''"></td>
+                    <td><input type="button" class="operator" name="không" value="0"
+                            onclick="calculator.display.value += '0'"></td>
+                    <td><input type="button" class="operator" name="bằng" value="="
+                            onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                    <td><input type="button" class="operator" name="chia" value="/"
+                            onclick="calculator.display.value += '/'"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="sin" id="sin" name="sin" value="sin"
+                            onclick="display.value=Math.sin(display.value)"> </td>
+                    <td><input type="button" class="cos" id="cos" name="cos" value="cos"
+                            onclick="display.value =Math.cos(display.value)"></td>
+                    <td><input type="button" class="tan" id="tan" name="tan" value="tan"
+                            onclick="display.value =Math.tan(display.value)"></td>
+
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>

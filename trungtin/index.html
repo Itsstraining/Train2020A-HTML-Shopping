@@ -1,15 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop ban giay </title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
- <body>
-     <div>
-        <div style="font-size: 30; color: navy; background-color: white; padding: 20 20 20 20 ;" >
-         <p> giay co cao</p>
-         <img src="https://pluspng.com/img-png/converse-png-file-all-star-converse-png-1258.png">
-         <p>giay co thap 1970s</p>
-         <img src="https://giaygiare.vn/upload/sanpham/large/converse-chuck-1970-den-co-thap-nam-nu.jpg"
-         ><p>giay luoi</p>
-         <img src="https://github.com/tinct3229/Train2020A-HTML-Shopping.git"
+<body>
+    <h1 style="background-color: chartreuse;font-size: 500;">Welcom to my shop;</h1>
 
-     </div>
- </body>
+
+    <p style="background-color:crimson;"font-size: 100; class="phello">Xin chao quy khach </p>
+    <ul>
+        Danh mục sản phẩm
+        <ol id="ol-render">
+
+            <!-- <img src="./imagesshop/tulo-shop.jpg" width="500px" height="500px"> <br> -->
+        </ol>
+        <input id="tongtienthep" disabled type="number">
+        <button class="button-tong-tien"  onclick="tinhtien()">Tong tien</button>
+   
+        <script>
+            let database = [
+                {
+                    id: "po1",
+                    name: "Giay co cao",
+                    price: 400000,
+                    img: "https://ananas.vn/wp-content/uploads/pro_creas_A61084_1.jpg",
+                    href: "./giaycocao.html"
+                },
+                {
+                    id: "po2",
+                    name: "Giay co thap",
+                    price: 450000,
+                    img: "https://ananas.vn/wp-content/uploads/pro_track6_A6T003_1.jpg",
+                    href: "./giaycothap.html"
+                },
+                {
+                    id: "po3",
+                    name: "Giay luoi",
+                    price: 490000,
+                    img: "https://ananas.vn/wp-content/uploads/stu_basas_A61024_1.jpg",
+                    href: "./giayluoi.html"
+                }
+            ];
+
+            let tongtien = 0;
+            let cart = [];
+            function tinhtien() {
+                for (let i = 0; i < cart.length; i++) {
+                    tongtien = tongtien + cart[i].price;
+                }
+                let thetongtien = document.getElementById("tongtienthep");
+                thetongtien.value = tongtien;
+            }
+            function additemtocart(item) {
+                cart.push(item);
+            }
+            //b1 xd dinh noi can render
+            let theol = document.getElementById("ol-render")
+
+            for (let item of database) {
+                //b2 khai bao ca the can thiet lap di lap lai
+                let theli = document.createElement("li");
+                let theimg = document.createElement("img");
+
+
+
+
+
+                //b3 gan gia tri va thuoc tinh can thiet cho cac the
+                theimg.src = item.img;
+                theimg.width = 500;
+
+                //b4 gan the con vao the cha
+                
+
+
+                let thename = document.createElement("p");
+                let theprice = document.createElement("p");
+                let thebutton = document.createElement("button");
+
+
+                thename.innerText = item.name;
+                theprice.innerText = item.price;
+                thebutton.innerText = "addTocart";
+                thebutton.classList .add("btn-hover","color-10");
+                
+        
+                thebutton.onclick = function () {
+                    additemtocart(item);
+                }
+
+
+                theli.appendChild(thename);
+                theli.appendChild(theprice);
+                theli.appendChild(thebutton);
+                theli.appendChild(theimg);
+
+
+                theol.appendChild(theli);
+                
+
+
+
+
+
+
+
+            }
+           
+
+
+
+            // let header1 = document.getElementById("header1");
+            // let listProduct = document.getElementById("listproduct");
+            // let inputnumber = document.getElementById("inputNumber");
+            // // let input img
+            // function addToCart(productId, quantily = 1) {
+            //     alert(productId);
+            // }
+
+             //for (let i = 0; i < database.lenght; i++);
+             //let productTille = document.createElement("h2");
+             //productTille.appendChild(document.createTextNode(database[i].name));
+             //let buttonAdd = document.createElement("button");
+            // buttonAdd.innerText = "Add to cart";
+             //buttonAdd.onclick = () => {
+            //     addToCart(database[i].id,1);
+
+            // }
+
+            // function onClickme() {
+            //     alert(inputnumber.Value);
+            //     let numberofproduct = parseInt(prompt("Number of product?"));
+            //     while (numberofproduct > 0) {
+            //         let productName = prompt("Enter product's name");
+            //         let newproductnode = document.createElement("li");
+            //         newproductnode.appendChild(document.createTextNode(productName));
+            //         listProduct.appendChild(newproductnode);
+            //         numberofproduct--;
+            //     }
+            // }
+        </script>
+        </ol>
+    </ul>
+</body>
+</html>
+
+
+
+
+
