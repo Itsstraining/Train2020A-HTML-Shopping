@@ -17,8 +17,8 @@ let vector = {
 
 function rotate(vector) {
   let result = {
-    x: -vector.y,
-    y: vector.x,
+    x: vector.y,
+    y: -vector.x,
   };
   return result;
 }
