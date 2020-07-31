@@ -59,6 +59,7 @@ function spiral(size, vector) {
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
+
     x: Math.floor(size / 2) -1,
     y: Math.floor(size / 2) ,
   };
