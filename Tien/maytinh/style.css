@@ -1,0 +1,54 @@
+body{
+    display: flex;
+}
+form {
+  background: rgb(141, 219, 16);
+    margin: 0;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form table {
+  width: 100%;
+  
+}
+form table tr, form table td {
+  border: 1px solid rgb(35, 170, 64);
+}
+/* form table tr:first-child input {
+  height: 100px;
+  padding: 10 10px;
+  font-weight: 700; 
+}*/
+form table tr:not(:first-child) td {
+  height: 70px;
+}
+form table tr:not(:first-child) td input {
+  height: 100%;
+}
+form table input {
+  width: 100%;
+  display:-moz-deck;
+  border: 0;
+  font-size: 20px;
+}
+form table input:focus {
+  outline: none;
+}
+form table input:hover {
+  background: rgb(119, 18, 185);
+  transition: all .2s ease-in-out;
+}
+form table input.operator {
+  font-weight: 700;
+  color: rgb(207, 22, 22);
+  background: #1cd845;
+}
+
+body {
+    background-image: url(https://scontent.fsgn5-4.fna.fbcdn.net/v/t1.15752-9/116590465_291197485649783_5076397705224592634_n.jpg?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=Z7XCaBCeyEYAX-XYif1&_nc_ht=scontent.fsgn5-4.fna&oh=0469bf13ab83feed6f49801099dadf00&oe=5F4B31D7);
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #95e42e, #C33764);  
+    background: linear-gradient(to right, #1D2671, #C33764); 
+}
