@@ -1,5 +1,5 @@
 <head>
-    <p style="text-align: center;">Gaming Shop</p>
+    <p style="text-align: center;color: darkkhaki;">Gaming Shop</p>
     <link href="./design.css" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -43,12 +43,11 @@
 
     <script>
         let database = [
-            { id: "01", name: "Assassin's Creed Unity", price: 500000, img: "AssassinCreed/pic1.jpg" },
-            { id: "02", name: "WW2", price: 500000, img: "WWZ/pic2.jpg" },
-            { id: "03", name: "Farcry3", price: 500000, img: "Farcry3/pic3.jpg" },
-            { id: "04", name: "BatMan", price: 500000, img: "BatMan/pic4.jpg" },
-            { id: "05", name: "Gta V", price: 500000, img: "GTAV/pic5.jpg" },
-
+            { id: "01", name: "Assassin's Creed Unity", price: 500000, img: "AssassinCreed/pic1.jpg", content: `Giờ đây không cần tới Paris hay tham gia vào game Assassin's Creed Unity, các bạn vẫn có thể tham quan và trải nghiệm không khí của một nhà thờ mang phong cách Gothic cổ điển ngay tại Việt Nam.` },
+            { id: "02", name: "WW2", price: 500000, img: "WWZ/pic2.jpg", content: 'World War Z là trò chơi điện tử bắn súng góc nhìn thứ ba được phát triển bởi Saber Interactive và được phát hành bởi Mad Dog Games. Nó được phát hành cho Microsoft Windows, PlayStation 4 và Xbox One vào ngày 16 tháng 4 năm 2019. Dựa vào cuốn sách cùng tên năm 2006 và được đặt trong cùng vũ trụ với bộ phim chuyển thể năm 2013, trò chơi theo chân những người sống sót trong thảm họa dịch bệnh thây ma ở các thành phố Moskva, New York, Jerusalem và Tokyo.' },
+            { id: "03", name: "Farcry3", price: 500000, img: "Farcry3/pic3.jpg", content: 'Far Cry 3 dẫn người chơi vào vai Jason Brody, một khách du lịch bị rơi vào bẫy của hải tặc và bị kẹt trên hòn đảo thuộc Châu Á – Thái Bình Dương.' },
+            { id: "04", name: "BatMan", price: 500000, img: "BatMan/pic4.jpg", content: 'Batman: Arkham là một series games hành động phiêu lưu được giới chuyên môn cũng như người chơi đánh giá rất cao về lối dẫn chuyện, tạo hình nhân vật, cơ chế chiến đấu trong games, và nhiều mặt khác, đem lại thành công lớn về mặt thương mại. Địa điểm chính trong series là Gotham City (Thành phố Gotham), nơi Batman sinh sống và chiến đấu. Series games sẽ dẫn người chơi theo chân nhân vật chính Batman phiêu lưu trong một thế giới mở, ngăn chặn những tên tội phạm nổi tiếng nguy hiểm như Joker, Harley Quinn, Riddler, Penguin, Two-Face, Bane, Deadshot, Deathstroke, hay Scarecrow, v.v. Bối cảnh Thành phố Gotham, tạo hình tính cách của Batman, Joker, Harley Quinn, và các nhân vật khác trong series là vô cùng đen tối, chưa bao giờ xuất hiện trong các games trước đây.' },
+            { id: "05", name: "Gta V", price: 500000, img: "GTAV/pic5.jpg", content: 'Grand Theft Auto V là một trò chơi điện tử hành động phiêu lưu được Rockstar North phát triển và Rockstar Games phát hành. Đây là phần thứ năm của dòng trò chơi Grand Theft Auto sau Grand Theft Auto IV (2008). Lấy bối cảnh ở bang San Andreas được hư cấu dựa trên miền Nam California, cốt truyện của chế độ chơi đơn xoay quanh ba nhân vật chính—tên cướp ngân hàng đã giải nghệ Michael De Santa, tên giang hồ đường phố Franklin Clinton, và tên bán thuốc phiện và buôn lậu vũ khí Trevor Philips—cũng như các phi vụ trộm cướp mà họ thực hiện dưới áp lực từ một cơ quan chính phủ và những tên tội phạm khác. Thiết kế thế giới mở cho phép người chơi tự do khám phá vùng nông thôn của San Andreas cũng như thành phố Los Santos được hư cấu dựa trên Los Angeles.' },
         ];
 
 
@@ -76,6 +75,14 @@
             let divImageContainer = document.createElement("div");
             divImageContainer.className = "card-image";
 
+            let divContent = document.createElement("div");
+            divContent.className = "card-content";
+            let content = document.createElement("p");
+
+            content.innerText = database[i].content;
+
+            divContent.appendChild(content);
+
 
 
             let divButtonContainer = document.createElement("div");
@@ -102,7 +109,7 @@
             img.width = 500;
             img.length = 200;
             price.innerText = database[i].price;
-            price.className ="priceTag"
+            price.className = "priceTag"
             button.innerText = "ấn mua";
             button.classList.add('btn');
             button.classList.add('cta');
@@ -118,12 +125,13 @@
             }
 
             // BUTTON
-            divButtonContainer.appendChild(button) 
+            divButtonContainer.appendChild(button)
             divImageContainer.appendChild(img)
             divImageContainer.appendChild(name)
 
 
             li.appendChild(divImageContainer);
+            li.appendChild(divContent);
             li.appendChild(divButtonContainer);
             li.appendChild(price);
 
