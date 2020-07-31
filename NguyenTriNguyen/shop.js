@@ -88,6 +88,7 @@ function count() {
 }
 
 function addToCart(pro, inputValue) {
+    inputValue > 0;
     cart.push({
         id: pro.id,
         name: pro.name,
