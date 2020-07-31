@@ -1,90 +1,100 @@
-<div class="container">
-    <form class="calculator">
-        <table>
-            <tr>
-                <td colspan=4>
-                    <input class="equal" id="input" type="text" name="display" disabled>
-                </td>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="sin" value="sin()" onclick="tinhsin(display.value)">
-                </th>
-                <th><input class="button" type="button" name="cos" value="cos()" onclick="tinhcos(display.value)">
-                </th>
-                <th><input class="button" type="button" name="tan" value="tan()" onclick="tinhtan(display.value)">
-                </th>
-                <th><input class="button" type="button" class="operator" value="/" onclick="display.value += '/'">
-                </th>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="seven" value="7" onclick="display.value += 7"></th>
-                <th><input class="button" type="button" name="eight" value="8" onclick="display.value += 8"></th>
-                <th><input class="button" type="button" name="nine" value="9" onclick="display.value += 9"></th>
-                <th><input class="button" type="button" class="operator" value="" onclick="display.value += ''">
-                </th>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="four" value="4" onclick="display.value +=4"></th>
-                <th><input class="button" type="button" name="five" value="5" onclick="display.value +=5"></th>
-                <th><input class="button" type="button" name="six" value="6" onclick="display.value +=6">
-                </th>
-                <th><input class="button" type="button" class="operator" value="-" onclick="display.value += '-'">
-                </th>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="one" value="1" onclick="display.value +=1">
-                </th>
-                <th><input class="button" type="button" name="two" value="2" onclick="display.value +=2">
-                </th>
-                <th><input class="button" type="button" name="three" value="3" onclick="display.value +=3"></th>
-                <th><input class="button" type="button" class="operator" value="+" onclick="display.value += '+'">
-                </th>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="clear" value="C" onclick="display.value = ''"></th>
-                <th><input class="button" type="button" name="zero" value="0" onclick="display.value += 0 "></th>
-                <th><input class="button" type="button" name="dot" value="." onclick="display.value +='.'"></th>
-                <th><input class="button" type="button" name="operator" value="=" onclick="display.value=eval(display.value)">
-                </th>
-            </tr>
-            <tr>
-                <th><input class="button" type="button" name="ans" value="Ans" onclick="previousans()"></th>
-            </tr>
-        </table>
-</div>
-</div>
-</form>
-<script>
-    let ans = 0;
+<head>
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
 
-    function previousans() {
-        let input = document.getElementById('input')
-        input.value = ans;
-    }
+<body>
+    <div class="container">
 
-    function saveeval() {
-        let input = document.getElementById('input')
+        <div class="MayTinh">
 
-    }
+            <input class="MayTinh" type="text" id="display">
+        </div>
+        ------------------------
+        <div>
+            <input class="button" type="button" name="sin" value="sin()" onclick="tinhsin(display.value)">
+            <input class="button" type="button" name="cos" value="cos()" onclick="tinhcos(display.value)">
+            <input class="button" type="button" name="tan" value="tan()" onclick="tinhtan(display.value)">
+            <input class="button" type="button" name="Cot" value="Cot()" onclick="tinhcot(display.value)">
+        </div>
 
-    function tinhsin() {
-        let input = document.getElementById('input');
-        let value = input.value
-        let result = Math.sin(value)
-        input.value = result
-    }
 
-    function tinhcos() {
-        let input = document.getElementById('input');
-        let value = input.value
-        let result = Math.cos(value)
-        input.value = result
-    }
+        ------------------------
+        <div>
+            <input class="button" type="button" name="one" value="1" onclick="display.value +=1">
+            <input class="button" type="button" name="two" value="2" onclick="display.value +=2">
+            <input class="button" type="button" name="three" value="3" onclick="display.value +=3">
+            <input class="button" type="button" name="four" value="4" onclick="display.value +=4">
+            <input class="button" type="button" name="five" value="5" onclick="display.value +=5">
+        </div>
+        ------------------------
+        <div>
+            <input class="button" type="button" name="six" value="6" onclick="display.value +=6">
+            <input class="button" type="button" name="seven" value="7" onclick="display.value += 7">
+            <input class="button" type="button" name="eight" value="8" onclick="display.value += 8">
+            <input class="button" type="button" name="nine" value="9" onclick="display.value += 9">
+        </div>
+        -----------------------------
+        <div>
+            <input class="button" type="button" class="operator" value="*" onclick="display.value += '*'">
+            <input class="button" type="button" class="operator" value="-" onclick="display.value += '-'">
+            <input class="button" type="button" class="operator" value="+" onclick="display.value += '+'">
+            <input class="button" type="button" class="operator" value="/" onclick="display.value += '/'">
+        </div>
 
-    function tinhtan() {
-        let input = document.getElementById('input');
-        let value = input.value
-        let result = Math.tan(value)
-        input.value = result
-    }
-</script>
+        ---------------------------------
+        <div>
+            <input class="button" type="button" name="clear" value="C" onclick="display.value= ''">
+            <input class="button" type="button" name="zero" value="0" onclick="display.value += 0">
+            <input class="button" type="button" name="dot" value="." onclick="display.value +='.'">
+            <input class="button" type="button" name="operator" value="=" onclick="display.value=eval(display.value)">
+            <input class="button" type="button" name="ans" value="Ans" onclick="Previousans()">
+        </div>
+
+    </div>
+
+    <script>
+        let ans = 0;
+
+        function Previousans() {
+            let input = document.getElementById('display');
+            let result = value.
+
+        }
+
+        function saveeval() {
+            let input = document.getElementById('display');
+
+        }
+
+        function tinhsin() {
+            let input = document.getElementById('display');
+            let value = input.value;
+            let result = Math.sin(value);
+            input.value = result;
+        }
+
+        function tinhcos() {
+            let input = document.getElementById('display');
+            let value = input.value;
+            let result = Math.cos(value);
+            input.value = result;
+        }
+
+        function tinhtan() {
+            let input = document.getElementById('display');
+            let value = input.value;
+            let result = Math.tan(value);
+            input.value = result;
+        }
+
+        function tinhcot() {
+            let input = document.getElementById('display');
+            let value = input.value;
+            let result = 1 / (Math.tan(value));
+            input.value = result;
+        }
+    </script>
+</body>
