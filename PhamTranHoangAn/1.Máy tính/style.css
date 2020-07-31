@@ -1,0 +1,49 @@
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.container{
+    background: rgb(28, 177, 60);
+    margin-left: 450px;
+    border-width: 8px;
+    border-style: solid;
+    width: 380px;
+    height: 520px;
+    border-color: rgb(24, 218, 176);
+    
+}
+input{
+    background-color:rgb(163, 21, 99); /* Green */
+  border: none;
+  color: white;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 8px ;
+}
+#khungtinh{
+    background-color: darkgray;
+    width: 340px;
+    height: 50px;
+    margin-left: 10px;
+}
+#phimchu{
+    background-color:rgb(175, 106, 15);
+}
+#daubang{
+    background-color:rgb(74, 7, 182);
+}
+#dau{
+    background-color:rgb(150, 6, 6);
+}
+        
+       
+       
+
+      
+      
