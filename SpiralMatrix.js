@@ -70,10 +70,15 @@ function spiral(size, vector) {
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
+<<<<<<< HEAD
+    x: Math.floor(size / 2)-1 ,
+    y: Math.floor(size / 2),
+=======
 
     x: Math.floor(size / 2) -1,
     y: Math.floor(size / 2) ,
 
+>>>>>>> ab069cab5dd206709d87e08a1bc9847a2a9a0bcf
   };
   console.log(current);
   while (checkCollision(current, size)) {
@@ -83,8 +88,12 @@ function spiral(size, vector) {
     current = move(current, vector);
     if (checkCollision(current, size)) {
       matrix[current.x][current.y] = step;
+<<<<<<< HEAD
+      step--;
+=======
       step++;
 
+>>>>>>> ab069cab5dd206709d87e08a1bc9847a2a9a0bcf
     }
     return matrix;
 }
