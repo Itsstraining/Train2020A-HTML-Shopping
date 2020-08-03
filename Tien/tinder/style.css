@@ -1,0 +1,53 @@
+
+body{
+    position: relative;
+    background: #FF5F6D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+}
+.policies{
+    margin-top: 10%;
+    text-align: center;
+}
+.signup button{
+    margin:auto;
+    display:block;
+    height: 70px;
+    background-color: #FF5F6D;
+    width: 200px;
+    border-radius: 50px; 
+    font-size: 20px;
+    border: none;
+}
+.login {
+    display: flex;
+    justify-content:flex-end;
+    margin: top;
+    margin-right: 100px;
+    
+}
+.login button{
+    height: 70px;
+    border: none;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 20px;
+    background-color: white;
+}
+.add {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 100px;
+    font-style: inherit;
+    color: ivory;
+}
+.signup button:hover{
+    background-color: #ffffff;
+}
+.login button:hover{
+    background-color: #FF5F6D;
+}
+.taskicon{
+   float: right;
+}
