@@ -1,0 +1,37 @@
+
+
+form {
+    align-content: center;
+    width: 260px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+tr{
+    background-color:pink;
+    margin: auto;
+
+}
+td{
+    
+    background-color: pink;
+}
+table{
+    width: 500px;
+    height: 250px;
+     background-color: pink;
+}
+input{
+    width: 80px;
+    height: 30px;
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+text{
+    background-color: white;
+}
+#inputV{
+    width: 480px;
+    align-content: center;
+}

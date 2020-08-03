@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="./format.css" rel="stylesheet">
+</head>
+<body>
+  <div class="calculator-grid">
+    <div class="output">
+      <div data-previous-operand id="previous-operand"></div>
+      <div data-current-operand id="current-operand"></div>
+    </div>
+    
+    <button data-all-clear class="span-two" onclick="clearScreen()">AC</button>
+    <button data-delete>DEL</button>
+    <button data-operation onclick="clicktoOperation('/')">/</button>
+    <button data-number onclick="clickToAdd(1)">1</button>
+    <button data-number onclick="clickToAdd(2)">2</button>
+    <button data-number onclick="clickToAdd(3)">3</button>
+    <button data-operation onclick="clicktoOperation('*')" >*</button>
+    <button data-number onclick="clickToAdd(4)">4</git>
+    <button data-number onclick="clickToAdd(5)">5</button>
+    <button data-number onclick="clickToAdd(6)">6</button>
+    <button data-operation onclick="clicktoOperation('+')">+</button>
+    <button data-number onclick="clickToAdd(7)">7</button>
+    <button data-number onclick="clickToAdd(8)">8</button>
+    <button data-number onclick="clickToAdd(9)">9</button>
+    <button data-operation onclick="clicktoOperation('-')">-</button>
+    <button data-number onclick="clicktoOperation('.')">.</button>
+    <button data-number onclick="sin()">sin</button>
+    <button data-number onclick="cos()">cos</button>
+    <button data-number onclick="tan()">tan</button>    
+    <button data-equals class="span-two" onclick="compute()">=</button>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>

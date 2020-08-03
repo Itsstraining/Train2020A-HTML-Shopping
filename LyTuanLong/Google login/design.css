@@ -1,0 +1,148 @@
+.box{
+    height: auto;
+    min-height: 500px;
+    width: 448px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 10px;
+    padding: 48px,40px,36px;
+    align-content: center;
+    box-sizing: inherit;
+    direction: ltr;
+    display: inline-block;
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 6%;
+}
+
+.inbox{
+    margin-top: 10%;
+}
+
+.margin-left{
+    margin-left: -1%;
+}
+
+.googlefont{
+    color: #202124;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    padding-bottom: 0;
+    padding-top: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.continuegoogle{
+    color: #202124;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: 8px;
+    box-sizing: inherit;
+    padding-bottom: 0;
+    padding-top: 8px;
+    margin-bottom: 5%;
+}
+
+.forgotbutton{
+    box-sizing: inherit;
+    padding-bottom: 3px;
+    padding-top: 9px;
+    display: block;
+    font-size: 15px;
+    white-space: normal;
+    border: solid white;
+    background-color: white;
+    color: #1a73e8;
+    margin-left: 5%;
+}
+
+.actionbutton{
+    box-sizing: inherit;
+    padding-bottom: 3px;
+    padding-top: 9px;
+    display: inline-block;
+    font-size: 15px;
+    white-space: normal;
+    border: solid white;
+    background-color: white;
+    color: #1a73e8;
+}
+
+.messagebox{
+    color: #5f6368;
+    font-size: 15px;
+    line-height: 1.4286;
+    margin-top: 32px;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    direction: ltr;
+    box-sizing: inherit;
+    align-content: flex-start;
+    text-align: left;
+    display: inline-block;
+    padding: 25px ;
+    margin-bottom: 0%;
+}
+
+.continuebutton{
+    border-radius: 4px;
+    height: 2,5%;
+    width: 22%;
+    box-sizing: inherit;
+    padding-bottom: 3px;
+    padding-top: 9px;
+    font-size: 15px;
+    white-space: normal;
+    border: solid #1a73e8;
+    background-color: #1a73e8;
+    color: white;
+    display: inline-block;
+    margin-left: 160px;
+}
+
+
+.outboxbutton{
+    border-radius: 2px;
+    color: #757575;
+    display:block;
+    padding-left: 16px;
+    padding-right: 24px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    transition: background .2s;
+    box-sizing: inherit;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    direction: ltr;
+}
+#user_name{
+    border-color: lightgrey ;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 53%;
+    margin-top: 9%;
+
+}
+
+.bt{
+    border: solid white;
+    background-color: white;
+    color: #757575;
+    font-size: 100%;
+}
+
+form {
+    display: inline-flex;
+    margin-left: 35%;
+}

@@ -1,0 +1,59 @@
+form {
+    background: whitesmoke;
+    margin: 150px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 1px;
+}
+
+form * {
+    box-sizing: border-box;
+    box-shadow: yellowgreen;
+}
+
+form table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 100px;
+}
+
+form table tr,
+form table td {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+form table tr:first-child input {
+    height: 100px;
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+form table tr:not(:first-child) td {
+    height: 100px;
+}
+
+form table tr:not(:first-child) td input {
+    height: 60%;
+}
+
+form table input {
+    width: 100%;
+    display: block;
+    border: 0;
+    font-size: 16px;
+}
+
+form table input:focus {
+    outline: none;
+}
+
+form table input:hover {
+    background: white);
+    transition: all .2s ease-in-out;
+}
+
+form table input.operator {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    background: rgb(49, 209, 49);
+}

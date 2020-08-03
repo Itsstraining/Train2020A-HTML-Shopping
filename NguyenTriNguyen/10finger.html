@@ -1,0 +1,154 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Typing</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <script src="./10finger.js">
+    </script>
+</head>
+
+<body>
+    <header> Nhanh tay thì thắng </header>
+    <div class="all">
+        <p>Ngon thì nhào dzô !!!</p>
+        <h2 class="tuDacho" id="tuHientai">
+            none
+        </h2>
+    </div>
+
+    <>
+        <input type="text" id="nhap" autofocus name="tuNhapvao" required="required" placeholder="Gõ vào đây nè má :v">
+        <h4> Điểm: <span id="diem">0</span> <br> Thời gian: <span id="thoigian">69</span>
+        </h4>
+        </div>
+
+        <h2 id="kiemtra">Đoán xem :D</h2>
+
+        <script>
+            window.addEventListener('load', initialize);
+            let diem = 0;
+            let thoigian = 69;
+            let dangChoi;
+            let thoigianHientai = thoigian;
+            const tuHientai = document.getElementById("tuHientai")
+            const tuNhapvao = document.getElementById("nhap")
+            const xemDiem = document.getElementById("diem")
+            const demThoigian = document.getElementById("thoigian")
+            const thua = document.getElementById("kiemtra")
+            const tu = [
+                'title',
+                'events',
+                'light',
+                'dark',
+                'hi',
+                'hello',
+                'javascript',
+                'the',
+                'of',
+                'to',
+                'and',
+                'a',
+                'in',
+                'is',
+                'it',
+                'you',
+                'that',
+                'he',
+                'was',
+                'for',
+                'on',
+                'are',
+                'with',
+                'as',
+                'his',
+                'they',
+                'be',
+                'at',
+                'one',
+                'have',
+                'this',
+                'from',
+                'or',
+                'had',
+                'by',
+                'not',
+                'word',
+                'but',
+                'what',
+                'some',
+                'we',
+                'can',
+                'out',
+                'other',
+                'were',
+                'all',
+                'there',
+                'when',
+                'up'
+            ]
+
+            let co = false;
+
+            function initialize() {
+                xemTu(tu);
+                tuNhapvao.addEventListener('input', batdau);
+                document.onkeypress = () => {
+                    if (!co) {
+                        setInterval(demNguoc, 1000);
+                        co = true;
+
+                    }
+                }
+                setInterval(xemTrangthai, 50);
+            }
+
+            function batdau() {
+                if (tuDung()) {
+                    dangChoi = true
+                    xemTu(tu);
+                    tuNhapvao.value = '';
+                    diem++;
+                }
+                if (diem === -1) {
+                    xemDiem.innerHTML = 0;
+                } else {
+                    xemDiem.innerHTML = diem;
+                }
+
+            }
+
+            function tuDung() {
+                if (tuNhapvao.value === tuHientai.innerHTML) {
+                    thua.innerHTML = "Dung roi ne ma oi !!! :>";
+                    return true;
+                } else {
+                    thua.innerHTML = "";
+                    return false;
+                }
+            }
+
+
+            function xemTu(tu) {
+                const randIndex = Math.floor(Math.random() * tu.length);
+                tuHientai.innerHTML = tu[randIndex];
+            }
+
+            function xemTrangthai() {
+                if (dangChoi && thoigian === 0) {
+                    thua.innerHTML = "Thua roi nha leu leu !!!! :p";
+                    diem = -1;
+                }
+
+            }
+
+            function demNguoc() {
+                if (thoigian > 0);
+                thoigian--;
+            }
+            dangChoi = false;
+            demThoigian.innerHTML = thoigian;
+        </script>
+
+</body>

@@ -1,0 +1,60 @@
+#header2{
+    color: blanchedalmond;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbrLBK-5p5QxEZzfqAzHI4Hh7F9XupYE1dTg&usqp=CAU");
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+  
+   li {
+       color: azure;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSbrLBK-5p5QxEZzfqAzHI4Hh7F9XupYE1dTg&usqp=CAU");
+    border-radius: 3px;
+    display: inline-block;
+    height: 250px;
+    margin: 5rem;
+    position: relative;
+    width: 300px;
+    
+  }
+  
+  li{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+  button {
+
+    
+    padding: 0;
+  
+    overflow: hidden;
+  
+    
+    
+  
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    
+    background-color: darkslategrey;
+    color: #ecf0f1;
+    
+    transition: background-color .3s;
+  }
+  
+
+  
+  html {
+    position: relative;
+    height: 100%;
+  }
+
+  
+ p{
+     color: azure;
+     font-size: 30;
+ }
+ body{
+    background-image: url("https://wallpaperset.com/w/full/9/2/9/310975.jpg");
+    text-align: center;
+ }
+ 
+ 

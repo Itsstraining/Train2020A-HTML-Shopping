@@ -1,0 +1,94 @@
+.login-dark {
+    height: 1000px;
+    /* background: #475d62 url(../../assets/img/star-sky.jpg); */
+    background-color: rgb(242, 242, 242);
+    background-size: cover;
+    position: relative;
+}
+
+.login-dark form {
+    max-width: 540px;
+    width: 90%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-dark form .form-control {
+    height: 55px;
+    background: none;
+    border: 3px solid #f2f2f2;
+    border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+    color: black;
+}
+
+.login-dark form .btn-primary {
+    background: #214a80;
+    border-radius: 4px;
+    padding: 11px;
+    margin-top: 26px;
+    text-shadow: none;
+    outline: none;
+}
+
+
+/* Another Platform */
+
+.login-dark form .anotherPlatform {
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background-color: #f2f2f2;
+}
+
+.login-dark form .anotherPlatform p {
+    color: black;
+    text-align: center;
+}
+
+
+/**/
+
+
+/* Custom position icon */
+
+.login-dark form .anotherPlatform .form-group button {
+    position: relative;
+}
+
+.login-dark form .anotherPlatform .form-group button i {
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+
+/**/
+
+.login-dark form .bottom {
+    color: black;
+    text-align: center;
+}
+
+.login-dark form .bottom button {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10rem;
+    padding: 5px 10px 10px 10px;
+}
+
+.login-dark form .bottom button a {
+    color: black;
+}
+
+.login-dark form .bottom button:hover {
+    background-color: rgb(12, 114, 231);
+}
