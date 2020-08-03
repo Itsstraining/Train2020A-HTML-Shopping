@@ -1,0 +1,25 @@
+ /*.buttonLoginLeft{background:url(/a/images/buttonLeft.png) no-repeat; height:18 px; width:8 px; float:left;}
+  .buttonLoginRight{background:url(/a/images/buttonRight.png) no-repeat; height:18 px; width:8 px; float:left;}
+  .buttonLoginCenter{background:url(/a/images/buttonCenter.png) repeat-x; height:18 px; float:left;}
+  #formLogin{background:url(/a/images/LOGINVNI.png) no-repeat; height:473 px; width:598px; position:relative; margin:50px auto;}
+  .user_log{float:left; width:255 px; position:relative; top:300 px; left:40 px;}
+  *:first-child + html .user_log{  top:285 px; min-height:83 px; height:83 px;}
+  .innounce_log{float:left; width:210 px; position:relative; top:185 px; left:60 px}
+  .trace_link{position:relative; text-align:center; top:328 px; left:120 px; width:598 px; clear:both; display:none;}
+  *:first-child + html .trace_link{ top:320 px;}
+  .trace_link a{font-family: tahoma;font-size: 8p t;color: #fff;font-weight: bold;line-height:14 px;}
+  */
+   
+  
+body{
+   background-image: url('https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&w=1000&q=80S');
+}
+.container{
+    background-image: url(./LOGINVNI.png);
+    width: 600px;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+.innounce_log{
+   font-size: 12px;
+}
