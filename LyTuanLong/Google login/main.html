@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="inbox">
+            <img src="ima/googlelogo_color_272x92dp.png" alt="google" width="75px" height="24">
+            <h1 class="googlefont"> Đăng nhập</h1>
+            <h1 class="continuegoogle">Tiếp tục với Gmail</h1>
+            <input size="55" style="height: 50px;" class="margin-left" id="user_name" type="text" class="validate"
+                placeholder="Email hoặc số điện thoại">
+
+            <button class="forgotbutton"
+                onclick=window.location.href='https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&osid=1&service=mail&ss=1&ltmpl=default&rm=false&flowName=GlifWebSignIn&flowEntry=AddSession'><b>Bạn
+                    quên địa chỉ email ?</b></button>
+            <div>
+                <h1 class="messagebox">Đây không phải máy tính của bạn? Hãy sử dụng chế độ Khách để đăng nhập một cách
+                    riêng tư.<button class="actionbutton"
+                        onclick=window.location.href='https://support.google.com/chrome/answer/6130773?hl=vi'>Tìm hiểu
+                        thêm</button> </h1>
+
+            </div>
+
+            <button class="actionbutton" onclick="">Tạo tài khoản</button>
+            <button class="continuebutton" onclick="">Tiếp theo</button>
+        </div>
+    </div>
+
+
+    <div class="outboxbutton">
+        <form action="/action_page.php">
+            <select name="language" id="language" style="border: white; width: 87px; margin-top: 9%;">
+                <option value="tv">Tiếng Việt</option>
+                <option value="ta">Tiếng Anh</option>
+                <option value="tt">Tiếng Trung (giản thể)</option>
+                <option value="tn">Tiếng Nhật</option>
+            </select>
+
+            <div class="btn">
+                <button class="bt"
+                    onclick=window.location.href='https://support.google.com/accounts?hl=vi#topic=3382296'><b>Trợ
+                        giúp</b></button>
+                <button class="bt" onclick=window.location.href='https://policies.google.com/privacy?gl=VN&hl=vi'><b>Bảo
+                        mật</b></button>
+                <button class="bt" onclick=window.location.href='https://policies.google.com/terms?gl=VN&hl=vi'><b>Điều
+                        khoản</b></button>
+            </div>
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>
