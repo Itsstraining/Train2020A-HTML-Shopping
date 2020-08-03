@@ -19,7 +19,7 @@
     </div>
 
     <>
-        <input type="text" id="Nhap" autofocus name="tuNhapvao" required="required" placeholder="Gõ vào đây nè má :v">
+        <input type="text" id="nhap" autofocus name="tuNhapvao" required="required" placeholder="Gõ vào đây nè má :v">
         <h4> Điểm: <span id="diem">0</span> <br> Thời gian: <span id="thoigian">69</span>
         </h4>
         </div>
@@ -33,7 +33,7 @@
             let dangChoi;
             let thoigianHientai = thoigian;
             const tuHientai = document.getElementById("tuHientai")
-            const tuNhapvao = document.getElementById("Nhap")
+            const tuNhapvao = document.getElementById("nhap")
             const xemDiem = document.getElementById("diem")
             const demThoigian = document.getElementById("thoigian")
             const thua = document.getElementById("kiemtra")
@@ -93,7 +93,7 @@
 
             function initialize() {
                 xemTu(tu);
-                tuNhapvao.addEventListener('tuNhapvao', batdau);
+                tuNhapvao.addEventListener('input', batdau);
                 document.onkeypress = () => {
                     if (!co) {
                         setInterval(demNguoc, 1000);
@@ -122,7 +122,7 @@
             function tuDung() {
                 if (tuNhapvao.value === tuHientai.innerHTML) {
                     thua.innerHTML = "Dung roi ne ma oi !!! :>";
-                    return true
+                    return true;
                 } else {
                     thua.innerHTML = "";
                     return false;
