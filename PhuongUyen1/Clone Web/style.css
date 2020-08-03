@@ -1,0 +1,249 @@
+body {
+    color: rgba(250, 248, 248, 0.801);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.w3school-logo {
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.w3school-logo:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.w3-right {
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-align: end;
+}
+
+.w3-right:hover {
+    text-decoration: none;
+}
+
+
+
+.navbar {
+    background-color: #4CAF50 !important;
+    color: white;
+    height: 40px;
+}
+
+.navbar-toggler {
+    color: white !important;
+}
+
+#navbarNavDropdown {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbarDropdownMenuLink {
+    color: #fff;
+}
+
+/* #navbarNavDropdown{
+    color: white;
+    height: 30px;
+}
+
+.nav-item{
+    color: white;
+    height: 30px;
+    text-align: center;
+} */
+
+li a {
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 3px;
+    height: 40px;
+}
+
+li a:hover {
+    color: #333 !important;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 3px;
+    height: 40px;
+}
+
+.icon {
+    display: flex;
+    float: right !important;
+    box-sizing: inherit;
+}
+
+.mode {
+    width: 40px;
+    height: 40px;
+    text-align: right;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    justify-content: flex-end;
+}
+
+.mode:hover {
+    text-align: right;
+    color: #333;
+    height: 40px;
+    background-color: white;
+    width: 40px;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.search {
+    width: 40px;
+    height: 40px;
+    text-align: right;
+    color: white;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.search:hover {
+    text-align: right;
+    height: 40px;
+    color: #333;
+    background-color: white;
+    width: 40px;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.col-3 p {
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.aside a {
+    width: 100%;
+    color: #333;
+    background-color: white;
+    font-size: 15px;
+    list-style-type: none !important;
+}
+
+.aside a:hover {
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    background-color: gray;
+    align-items: center;
+    font-size: 15px;
+    list-style-type: none !important;
+}
+
+.aside {
+    background-color: white;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px rgb(211, 198, 198) solid;
+    width: 70%;
+}
+
+.col-3 {
+    width: 20%;
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.info h1{
+    margin-top: 10%;
+    color: #555555 !important;
+    font-size: 80px;
+    font-weight: 400;
+    font-family: "Segoe UI",Arial,sans-serif;
+    margin: 2px 0 -20px 0 !important;
+    text-align: center;
+}
+
+.info p{
+    color: #3a3a3a!important;
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.ex h3{
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    padding-left: 4%;
+    font-size: 24px;
+
+}
+
+.btn1{
+    background-color: #616161;
+    color: #fff;
+    border-style: none;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 5px 5px 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn1:hover{
+    background-color: #c7c4c4;
+    color: #000;
+    border-style: none;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 5px 5px 0;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ex{
+    margin-top: 3%;
+    margin-left: 3%;
+    color: #000;
+    background-color: #f1f1f1;
+    box-sizing: inherit;
+    display: block;
+    width: 400px;
+    height: 300px;
+}
