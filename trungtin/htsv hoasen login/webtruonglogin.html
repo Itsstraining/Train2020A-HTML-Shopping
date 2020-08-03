@@ -1,0 +1,147 @@
+<html>
+
+<head>
+  <meta name="keywords" content="hoa sen">
+  <meta name="description" content="Cong thong tin sinh vien dai hoc Hoa Sen">
+  <meta name="author" content="Dai hoc Hoa Sen">
+
+  <title>Đại học Hoa Sen | Cổng thông tin sinh viên</title>
+  <link rel ="icon" href="1_3.jpg">
+
+
+  <link rel="stylesheet" href="/a/styles.css" type="text/css">
+
+  <style type="text/css">
+    .buttonLoginLeft {
+      background: url(/a/images/buttonLeft.png) no-repeat;
+      height: 18px;
+      width: 8px;
+      float: left;
+    }
+
+    .buttonLoginRight {
+      background: url(/a/images/buttonRight.png) no-repeat;
+      height: 18px;
+      width: 8px;
+      float: right;
+    }
+
+    .buttonLoginCenter {
+      background: url(/a/images/buttonCenter.png) repeat;
+      height: 18px;
+      float: left;
+    }
+
+    #formLogin {
+      background: url(/a/images/LOGINVNI.png) no-repeat;
+      height: 473px;
+      width: 598px;
+      position: relative;
+      margin: 50px auto;
+    }
+
+    .user_log {
+      float: left;
+      width: 255px;
+      position: relative;
+      top: 300px;
+      left: 40px;
+    }
+
+    *:first-child+html .user_log {
+      top: 285px;
+      min-height: 83px;
+      height: 83px;
+    }
+
+    .innounce_log {
+      float: left;
+      width: 210px;
+      position: relative;
+      top: 185px;
+      left: 60px
+    }
+
+    .trace_link {
+      position: relative;
+      text-align: center;
+      top: 328px;
+      left: 120px;
+      width: 598px;
+      clear: both;
+      display: none;
+    }
+
+    *:first-child+html .trace_link {
+      top: 320px;
+    }
+
+    .trace_link a {
+      font-family: tahoma;
+      font-size: 8pt;
+      color: aquap;
+      font-weight: bold;
+      line-height: 14px;
+    }
+  </style>
+</head>
+
+<body onload="setErrorImg(); clearRecentSearch();">
+  <link href="./style.css" rel="stylesheet">
+  <div class="container">
+    <div id="formLogin">
+
+      <div class="infoLogin">
+        <div class="languageText">
+          <a href="?cmd=login&amp;languageCd=ENG" title="English">English</a>&nbsp;&nbsp;<img
+            src="/a/images/breakLanguage.jpg">;
+          <a href="?cmd=login&amp;languageCd=VNI" title="Tiếng Việt">Vietnamese</a>
+        </div>
+      </div>
+      <form action="?cmd=login&amp;languageCd=VNI" method="post" id="login" name="login" autocomplete="off"
+        onsubmit="signin(document.login)">
+        <input type="hidden" name="timezoneOffset" value="0">
+        <div class="user_log">
+          <table width="100%" cellspacing="0" cellpadding="3">
+            <tbody>
+              <tr>
+                <td width="110px"><label for="userid" class="psloginlabel">Tên đăng nhập:</label></td>
+                <td>
+                  <input id="userid" name="userid" type="text" class="pslogineditbox" value="TIN.CT3229" size="20"
+                    tabindex="2"></td>
+              </tr>
+              <tr>
+                <td><label for="pwd" class="psloginlabel">Mật khẩu:</label></td>
+                <td><input type="password" id="pwd" name="pwd" class="pslogineditbox" size="20" tabindex="3"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <div class="buttonLoginLeft"></div>
+                  <div class="buttonLoginCenter"><input name="Submit" type="submit" class="psloginbutton" tabindex="4"
+                      value="Đăng nhập" onclick="submitAction(document.login)"></div>
+                  <div class="buttonLoginRight">
+                     </td>
+              </tr>
+              <tr>
+                <td colspan="2" style="padding-left:15px">
+                  <h2 class="psloginerror_login" id="login_error"></h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="innounce_log">
+          <div style="text-align:center">
+            <h2 class="psloginerror" id="browsercheck_error" style="text-align:left"> Hệ điều hành bạn sử dụng không
+              được hỗ trợ với trang web này. Tốt nhất nên sử dụng các hệ điều hành sau:</h2>
+          </div  >
+          <h1>oracle Linus interprise </h1>
+          <h2> mac OX S (Leopard) </h2>        
+        </div>
+    </div>
+    </form>
+  </div>
+</body>
+
+</html>
