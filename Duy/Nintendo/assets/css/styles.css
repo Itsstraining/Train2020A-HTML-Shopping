@@ -1,0 +1,41 @@
+.row #Nav img {
+    height: 100px;
+}
+
+.row #Nav-content {
+    text-align: center;
+    line-height: 100px;
+}
+
+.form-control:first-child {
+    margin-top: 15px;
+}
+
+#header p {
+    top: 5px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    position: inherit;
+}
+
+
+/* Footer */
+
+#Footer {
+    width: 100%;
+    height: 100px;
+    background-color: #DFDFDF;
+    text-align: center;
+}
+
+#Footer .container .row .col a {
+    color: black;
+    font-size: 0.7rem;
+}
+
+#Footer .container .col #regionLanguage {
+    border-radius: 25px;
+    padding: 5px;
+}
