@@ -1,0 +1,70 @@
+form {
+    background: #ccc;
+    margin: 0 auto;
+    width: 500px;
+    height: 480px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+form * {
+    box-sizing: border-box;
+}
+
+form table {
+    width: 100%;
+    box-shadow: 0 0 7px 0px black;
+    border-collapse: collapse;
+}
+
+form table tr,
+form table td {
+    border: 1px solid #eee;
+}
+
+form table tr:first-child input {
+    height: 40px;
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+form table tr:not(:first-child) td {
+    height: 70px;
+}
+
+form table tr:not(:first-child) td input {
+    height: 100%;
+}
+
+form table input {
+    width: 100%;
+    display: block;
+    border: 20px;
+    font-size: 16px;
+}
+
+form table input:focus {
+    outline: none;
+}
+
+form table input.operator {
+    font-weight: 700;
+    color: #000000;
+    background: #ccac20;
+    border-radius: 8%;
+}
+
+p {
+    display: inline;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+}
+
+div {
+    margin: 10px;
+    padding-left: 10px;
+    float: right;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+        <h1>PET SHOP CENTER</h1>
+        <h3>Danh sách pet</h3>
+        <ol id="listPet"></ol>
+
+        <button onclick="onClickMe()" id="Show">Total Bill</button>
+    </div>
+
+
+    <script>
+        let inputAmount = document.getElementById("Amount");
+        let getUL = document.getElementById("listPet")
+        let checkOut = document.getElementById("Show")
+        let database = [{
+            id: "1",
+            petName: "Kiki",
+            Price: parseInt("5000")
+        }, {
+            id: 02,
+            petName: "Dolar",
+            Price: parseInt("5000")
+        }, {
+            id: 03,
+            petName: "Gol",
+            Price: parseInt("5000")
+        }, {
+            id: 04,
+            petName: "Shaza",
+            Price: parseInt("5000")
+        }, {
+            id: 05,
+            petName: "Yaya",
+            Price: parseInt("5000")
+        }]
+        for (let product of database) {
+
+            getUL.innerHTML = getUL.innerHTML + `<table style="width:20%;border:solid 1px black">
+        <tr >
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quality<th>
+            <th>Total<th>
+        </tr>
+        <tr >
+            <td > ${product.id}</td>
+            <td> ${product.petName}</td>
+            <td>${product.Price}</td>
+            <td><input id="Amount${product.id}" type="number" placeholder="Enter Amount you want ?" onChange="inra(${product.Price}, ${product.id})"></td>
+            <td id="tongtien${product.id}">0</td>
+        </tr>
+        
+    </table>
+            
+            `
+
+        };
+        // let input = document.getElementById("Amount");
+        // input.addEventListener("change", (value) => {
+        //     let value1 = document.getElementById("Amount").value;
+        //     let thetongtien = document.getElementById("tongtien");
+        //     console.log(value.Price);
+
+        // })
+
+        // function onClickMe() {
+        //     checkOut.innerHTML = `
+        //         `
+        // }
+        function inra(price, id) {
+            let idtext = "tongtien" + id;
+            let idinput = "Amount" + id;
+            let thetongtien = document.getElementById(idtext.toString());
+            let amount = document.getElementById(idinput).value;
+            let tongtien = amount * price;
+            thetongtien.innerText = tongtien;
+        }
+
+        function Tongtien(quality, price) {
+            return quality * price;
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
