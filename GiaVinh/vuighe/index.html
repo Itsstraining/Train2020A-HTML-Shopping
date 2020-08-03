@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="https://vuighe.net/" target="_blank">
+                    <img src="./web-thumbnail.png" alt="logo" width="100px" height="40px">
+                </a>
+                <button class="bnt-anime"><a href="https://vuighe.net/anime" target="_blank">anime</a></button>
+                <button class="bnt-movie"><a href="https://vuighe.net/movie" target="_blank">movie</a></button>
+                <button class="bnt-tin-tuc"><a href="https://vuighe.net/tin-tuc" target="_blank">tin-tuc</a></button>
+                <button class="bnt-truyentranh24"><a href="https://truyentranh24.com/"
+                        target="_blank">truyentranh24</a></button>
+                <button class="bnt-bang-xep-hang"><a href="https://vuighe.net/bang-xep-hang"
+                        target="_blank">bang-xep-hang</a></button>
+
+                <input type="text" name="search-box" placeholder="Tìm kiếm anime" autocomplete="off" class="inp-search">
+                <img src="./search.svg" alt="" width="30px" height="30px" class="icon-search">
+                <button onclick="myFunction()" style="border: none; outline: none; cursor: pointer;">
+                    <img src="./sun.svg" alt="" width="35px" height="35px">
+                </button>
+                <img src="./user.svg" alt="" width="35px" height="35px" class="user-theme">
+            </div>
+        </div>
+
+        <div class="content">
+
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>
