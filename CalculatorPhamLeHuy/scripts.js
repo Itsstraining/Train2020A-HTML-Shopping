@@ -10,8 +10,8 @@ function clearScreen() {
 }
 
 
-function Xoa() { 
-
+function Xoa() {
+    
 }
 
 function compute(){

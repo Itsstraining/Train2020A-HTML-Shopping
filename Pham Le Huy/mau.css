@@ -1,0 +1,29 @@
+
+
+/*
+BODY
+*/
+
+body {
+  background-image: url("https://images4.alphacoders.com/653/thumb-1920-653563.jpg");
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    width: 100px;
+}
+
+#ul1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+
+
