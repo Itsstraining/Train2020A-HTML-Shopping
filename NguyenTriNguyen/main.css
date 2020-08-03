@@ -1,0 +1,915 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient( to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.btn-hover.color-2 {
+    background-image: linear-gradient( to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.btn-hover.color-3 {
+    background-image: linear-gradient( to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient( to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.btn-hover.color-5 {
+    background-image: linear-gradient( to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.btn-hover.color-6 {
+    background-image: linear-gradient( to right, #009245, #fcee21, #00a8c5, #d9e021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.btn-hover.color-7 {
+    background-image: linear-gradient( to right, #6253e1, #852d91, #a3a1ff, #f24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient( to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.btn-hover.color-9 {
+    background-image: linear-gradient( to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.btn-hover.color-10 {
+    background-image: linear-gradient( to right, #ed6ea0, #ec8c69, #f7186a, #fbb03b);
+    box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.btn-hover.color-11 {
+    background-image: linear-gradient( to right, #eb3941, #f15e64, #e14e53, #e2373f);
+    box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+
+/* Generals resets and unimportant stuff */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #eaebec;
+    font-family: "Open Sans", sans-serif;
+}
+
+#view-code {
+    color: #48cfad;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    margin-left: -35px;
+}
+
+#view-code:hover {
+    color: #34c29e;
+}
+
+
+/* --- Product Card ---- */
+
+#make-3D-space {
+    position: relative;
+    perspective: 800px;
+    width: 340px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 5s;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -167px;
+}
+
+#product-front,
+#product-back {
+    width: 335px;
+    height: 500px;
+    background: #fff;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#product-back {
+    display: none;
+    transform: rotateY( 180deg);
+}
+
+#product-card.animate #product-back,
+#product-card.animate #product-front {
+    top: 0px;
+    left: 0px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#product-card {
+    width: 325px;
+    height: 490px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    -webkit-transition: 100ms ease-out;
+    -moz-transition: 100ms ease-out;
+    -o-transition: 100ms ease-out;
+    transition: 100ms ease-out;
+}
+
+div#product-card.flip-10 {
+    -webkit-transform: rotateY( -10deg);
+    -moz-transform: rotateY( -10deg);
+    -o-transform: rotateY( -10deg);
+    transform: rotateY( -10deg);
+    transition: 50ms ease-out;
+}
+
+div#product-card.flip90 {
+    -webkit-transform: rotateY( 90deg);
+    -moz-transform: rotateY( 90deg);
+    -o-transform: rotateY( 90deg);
+    transform: rotateY( 90deg);
+    transition: 100ms ease-in;
+}
+
+div#product-card.flip190 {
+    -webkit-transform: rotateY( 190deg);
+    -moz-transform: rotateY( 190deg);
+    -o-transform: rotateY( 190deg);
+    transform: rotateY( 190deg);
+    transition: 100ms ease-out;
+}
+
+div#product-card.flip180 {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+    transition: 150ms ease-out;
+}
+
+#product-card.animate {
+    top: 5px;
+    left: 5px;
+    width: 335px;
+    height: 500px;
+    box-shadow: 0px 13px 21px -5px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 100ms ease-out;
+    -moz-transition: 100ms ease-out;
+    -o-transition: 100ms ease-out;
+    transition: 100ms ease-out;
+}
+
+.stats-container {
+    background: #fff;
+    position: absolute;
+    top: 386px;
+    left: 0;
+    width: 265px;
+    height: 300px;
+    padding: 27px 35px 35px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+#product-card.animate .stats-container {
+    top: 272px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+.stats-container .product_name {
+    font-size: 22px;
+    color: #393c45;
+}
+
+.stats-container p {
+    font-size: 16px;
+    color: #b1b1b3;
+    padding: 2px 0 20px 0;
+}
+
+.stats-container .product_price {
+    float: right;
+    color: #48cfad;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #48daa1;
+    opacity: 0;
+}
+
+#product-card.animate .image_overlay {
+    opacity: 0.7;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+.product-options {
+    padding: 2px 0 0;
+}
+
+.product-options strong {
+    font-weight: 700;
+    color: #393c45;
+    font-size: 14px;
+}
+
+.product-options span {
+    color: #969699;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+#view_details {
+    position: absolute;
+    top: 112px;
+    left: 50%;
+    margin-left: -85px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px 0;
+    width: 172px;
+    opacity: 0;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+#view_details:hover {
+    background: #fff;
+    color: #48cfad;
+    cursor: pointer;
+}
+
+#product-card.animate #view_details {
+    opacity: 1;
+    width: 152px;
+    font-size: 15px;
+    margin-left: -75px;
+    top: 115px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+
+div.colors div {
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    float: left;
+}
+
+div.colors div span {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+}
+
+div.colors div span:hover {
+    width: 17px;
+    height: 17px;
+    margin: -1px 0 0 -1px;
+}
+
+div.c-blue span {
+    background: #6e8cd5;
+}
+
+div.c-red span {
+    background: #f56060;
+}
+
+div.c-green span {
+    background: #44c28d;
+}
+
+div.c-white span {
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #e8e9eb;
+}
+
+div.shadow {
+    width: 335px;
+    height: 520px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+}
+
+#product-back div.shadow {
+    z-index: 10;
+    opacity: 1;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+}
+
+#flip-back {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#cx,
+#cy {
+    background: #d2d5dc;
+    position: absolute;
+    width: 0px;
+    top: 15px;
+    right: 15px;
+    height: 3px;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+#flip-back:hover #cx,
+#flip-back:hover #cy {
+    background: #979ca7;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+#cx.s1,
+#cy.s1 {
+    right: 0;
+    width: 30px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#cy.s2 {
+    -ms-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#cy.s3 {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#cx.s1 {
+    right: 0;
+    width: 30px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#cx.s2 {
+    -ms-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#cx.s3 {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 100ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+#carousel {
+    width: 335px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#carousel li {
+    width: 335px;
+    height: 500px;
+    float: left;
+    overflow: hidden;
+}
+
+.arrows-perspective {
+    width: 335px;
+    height: 55px;
+    position: absolute;
+    top: 218px;
+    transform-style: preserve-3d;
+    transition: transform 5s;
+    perspective: 335px;
+}
+
+.carouselPrev,
+.carouselNext {
+    width: 50px;
+    height: 55px;
+    background: #ccc;
+    position: absolute;
+    top: 0;
+    transition: all 200ms ease-out;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.carouselNext {
+    top: 0;
+    right: -26px;
+    -webkit-transform: rotateY( -117deg);
+    -moz-transform: rotateY( -117deg);
+    -o-transform: rotateY( -117deg);
+    transform: rotateY( -117deg);
+    transition: all 200ms ease-out;
+}
+
+.carouselNext.visible {
+    right: 0;
+    opacity: 0.8;
+    background: #efefef;
+    -webkit-transform: rotateY( 0deg);
+    -moz-transform: rotateY( 0deg);
+    -o-transform: rotateY( 0deg);
+    transform: rotateY( 0deg);
+    transition: all 200ms ease-out;
+}
+
+.carouselPrev {
+    left: -26px;
+    top: 0;
+    -webkit-transform: rotateY( 117deg);
+    -moz-transform: rotateY( 117deg);
+    -o-transform: rotateY( 117deg);
+    transform: rotateY( 117deg);
+    transition: all 200ms ease-out;
+}
+
+.carouselPrev.visible {
+    left: 0;
+    opacity: 0.8;
+    background: #eee;
+    -webkit-transform: rotateY( 0deg);
+    -moz-transform: rotateY( 0deg);
+    -o-transform: rotateY( 0deg);
+    transform: rotateY( 0deg);
+    transition: all 200ms ease-out;
+}
+
+#carousel .x,
+#carousel .y {
+    height: 2px;
+    width: 15px;
+    background: #48cfad;
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#carousel .x {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 21px;
+}
+
+#carousel .carouselNext .x {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#carousel .carouselNext .y {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Acme);
+body {
+    background: #faff81;
+}
+
+.box-wrapper {
+    background-color: #fff;
+    overflow: hidden;
+    max-width: 320px;
+    box-shadow: 0px 5px 43px rgba(0, 0, 0, 0.48);
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    img {
+        max-width: 100%;
+    }
+    .success {
+        position: absolute;
+        top: 50%;
+        left: 37%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        z-index: 999;
+        .expanded & {
+            opacity: 1;
+            transition: opacity 0.3s 0.6s;
+        }
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #fff;
+        }
+        &:before {
+            width: 40px;
+            height: 20px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            width: 88px;
+            height: 20px;
+            transform: rotate(-45deg);
+            top: -16px;
+            left: 8px;
+        }
+    }
+}
+
+.title {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "Acme", sans-serif;
+}
+
+.desc {
+    font-family: "Satisfy", cursive;
+    font-size: 1.2em;
+}
+
+.box-content {
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: "";
+        width: 200%;
+        height: 100px;
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        transform: rotate(-8deg);
+        top: -50px;
+        left: -10%;
+        z-index: -1;
+    }
+    .buy {
+        display: block;
+        top: -80px;
+        right: 30px;
+        z-index: 2;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        span {
+            width: 70px;
+            height: 70px;
+            background-color: #06d6a0;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            font-size: 36px;
+            color: #fff;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            i {
+                padding: 15px;
+            }
+            .expanded & {
+                width: 750px;
+                height: 750px;
+                i {
+                    display: none;
+                }
+            }
+        }
+    }
+    .price {
+        font-size: 2em;
+        font-weight: 900;
+        display: block;
+        width: 100px;
+        margin: 20px auto 0;
+        position: relative;
+        font-family: "Satisfy", cursive;
+        &:after,
+        &:before {
+            content: "";
+            height: 1px;
+            width: 50px;
+            display: block;
+            position: absolute;
+            background-color: #ddd;
+            top: 18px;
+        }
+        &:before {
+            left: -50px;
+        }
+        &:after {
+            right: -50px;
+        }
+    }
+    .footer {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0;
+            li {
+                color: #efd829;
+            }
+        }
+    }
+}
+
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+
+.demo .large-header {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo-bg.jpg");
+}
+
+.main-title {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    color: #F9F1E9;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.demo .main-title {
+    text-transform: uppercase;
+    font-size: 4.2em;
+    letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+    .demo .main-title {
+        font-size: 3em;
+    }
+}
+
+h1 {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.tbl-header {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tbl-content {
+    height: 300px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    margin: 50px;
+}
+
+
+/* follow me template */
+
+.made-with-love {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: #fff;
+}
+
+.made-with-love i {
+    font-style: normal;
+    color: #F50057;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+
+.made-with-love a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.made-with-love a:hover {
+    text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+ ::-webkit-scrollbar {
+    width: 6px;
+}
+
+ ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+ ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}

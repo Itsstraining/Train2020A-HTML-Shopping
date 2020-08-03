@@ -1,34 +1,37 @@
 function createTable(size, defaultValue) {
-  let tb = [];
-  for (let i = 0; i < size; i++) {
-    let arr = [];
-    for (let j = 0; j < size; j++) {
-      arr.push(defaultValue);
+    let tb = [];
+    for (let i = 0; i < size; i++) {
+        let arr = [];
+        for (let j = 0; j < size; j++) {
+            arr.push(defaultValue);
+        }
+        tb.push(arr);
     }
-    tb.push(arr);
-  }
-  return tb;
+    return tb;
 }
 
 let vector = {
-  x: 0,
-  y: -1,
+
+  x: 1,
+  y: 0,
 };
 
 function rotate(vector) {
   let result = {
-    x: -vector.y,
-    y: vector.x,
+    x: vector.y,
+    y: -vector.x,
   };
   return result;
 }
 
+
 function checkCollision(current, size) {
+
   if (
     current.x < 0 ||
-    current.x > size - 1 ||
+    current.x > size -1 ||
     current.y < 0 ||
-    current.y > size - 1
+    current.y > size -1
   ) {
     return false;
   }
@@ -36,31 +39,46 @@ function checkCollision(current, size) {
 }
 
 function canRotate(current, vector, matrix, size) {
-  let rVect = rotate(vector);
-  let rPos = move(current, rVect);
-  if (checkCollision(rPos, size)) {
-    if (matrix[rPos.x][rPos.y] == 0) {
-      return true;
+    let rVect = rotate(vector);
+    let rPos = move(current, rVect);
+    if (checkCollision(rPos, size)) {
+        if (matrix[rPos.x][rPos.y] == 0) {
+            return true;
+        }
     }
-  }
 
-  return false;
+    return false;
 }
 
 function move(current, vector) {
+
   let rPos = {
-    x: current.x + vector.x,
     y: current.y + vector.y,
+    x: current.x + vector.x,
   };
   return rPos;
 }
-
+function rotate(vector) {
+  let result = {
+    x: vector.y,
+    y: -vector.x,
+  };
+  return result;
+}
 function spiral(size, vector) {
+
   let matrix = createTable(size, 0);
   let step = 1;
   let current = {
+<<<<<<< HEAD
     x: Math.floor(size / 2)-1 ,
     y: Math.floor(size / 2),
+=======
+
+    x: Math.floor(size / 2) -1,
+    y: Math.floor(size / 2) ,
+
+>>>>>>> ab069cab5dd206709d87e08a1bc9847a2a9a0bcf
   };
   console.log(current);
   while (checkCollision(current, size)) {
@@ -70,12 +88,13 @@ function spiral(size, vector) {
     current = move(current, vector);
     if (checkCollision(current, size)) {
       matrix[current.x][current.y] = step;
+<<<<<<< HEAD
       step--;
+=======
+      step++;
+
+>>>>>>> ab069cab5dd206709d87e08a1bc9847a2a9a0bcf
     }
-  }
-  return matrix;
+    return matrix;
 }
 
-let matrix = spiral(5, vector);
-
-console.log(matrix);
