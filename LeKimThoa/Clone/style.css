@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.Instagram {
+    margin-top: 50px
+}
+
+.khung {
+    text-align: center;
+    background: #FFAFBD;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 350px;
+    height: 350px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.A {
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+}
+
+.khung2 {
+    text-align: center;
+    background: #FFAFBD;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#id {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#p {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+#Đ {
+    width: 300px;
+    margin-bottom: 10px;
+    background: #FFAFBD;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.KO {
+    padding-top: 2.5px;
+}
+
+.img-ins {
+    width: 400px;
+    height: 550px;
+    background-image: url(./1560e1af112a3b819c9a0afe4ba77c03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slide 5s infinite;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-top: 4.5%;
+}
+
+@keyframes slide {
+    33% {
+        background-image: url(./845b28b0ffffaad832c7f0b6dde387da.jpg);
+    }
+    33% {
+        background-image: url(./9db1f96114a7bf6e1444bf7e42a26c5a.jpg);
+    }
+    33% {
+        background-image: url(./ccf3c2d1c44b7c20cc97a00fd49c0dc1.jpg);
+    }
+}
+
+.img-bottom {
+    display: inline-flex;
+}
